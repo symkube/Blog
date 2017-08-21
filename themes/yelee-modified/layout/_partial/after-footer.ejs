@@ -1,0 +1,44 @@
+<% if (theme.github_widget){ %>
+    <%- js('js/GithubRepoWidget') %>
+<% } %>
+<script data-main="<%-config.root%>js/main.js" src="<%- theme.CDN.require %>"></script>
+<%- partial('_partial/background') %>
+<%- partial('google-analytics') %>
+<% if (theme.mathjax){ %>
+    <%- partial('mathjax') %>
+<% } %>
+<script type="text/x-mathjax-config">
+    var mathId = document.getElementById("gitalk-container");
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: "none",
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath:  [ ["$", "$"] ],
+            displayMath: [ ["$$","$$"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'],
+            ignoreClass:"comment-content"
+        },
+        "HTML-CSS": {
+            availableFonts: ["STIX","TeX"]
+        }
+    });
+    if (mathId != null) {
+        window.onload = function() {
+            $(".gt-container").bind("DOMNodeInserted", function() {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub], document.getElementById("gitalk-container"));
+            })
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub], mathId);
+        }
+    }
+</script>
+<script src="<%- theme.CDN.mathjax %>?config=TeX-AMS-MML_HTMLorMML" async="async">
+</script>
+<%- partial('scrolling-button') %>
+<%- partial('open-in-new-tab', {
+        global: theme.open_in_new.global
+    }) %>
+<%- partial('tab-title-change') %>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
