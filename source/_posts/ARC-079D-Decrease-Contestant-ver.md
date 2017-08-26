@@ -2,6 +2,10 @@
 title: 「ARC 079D」Decrease (Contestant ver.)-构造
 date: 2017-08-26 14:06:33
 tags:
+  - 构造
+categories:
+  - oi
+  - 构造
 ---
 给定一个数 $k$，要求构造一个非负整数序列，使得操作 $k$ 次后，最大数 $\leq n - 1$，每次操作选序列中最大值，将其 $-n$，其余数 $+1$。
 
