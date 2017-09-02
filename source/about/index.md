@@ -5,7 +5,7 @@ date: 2016-05-23 22:12:31
 ---
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=391387277&auto=1&height=430"></iframe>
 ## xehoth
-来自成都石室中学的OIer，2016年6月开始学OI，现役高一。
+来自成都石室中学的OIer，2016年6月开始学OI，现役高二。
 
 在此之前用Java和Lua写工程(其实没有Jetbrains全家桶就几乎写不出来代码)。
 
