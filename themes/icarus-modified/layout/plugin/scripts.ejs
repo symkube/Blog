@@ -1,0 +1,54 @@
+<% if (typeof(isHead) !== 'undefined' && isHead) { %>
+    <% if (theme.plugins.lightgallery) { %>
+        <%- css('libs/lightgallery/css/lightgallery.min') %>
+    <% } %>
+    <% if (theme.plugins.justifiedgallery) { %>
+        <%- css('libs/justified-gallery/justifiedGallery.min') %>
+    <% } %>
+    <% if (theme.plugins.google_analytics) { %>
+        <%- partial('plugin/google-analytics') %>
+    <% } %>
+    <% if (theme.plugins.google_site_verification) { %>
+        <meta name="google-site-verification" content="<%= theme.plugins.google_site_verification %>" />
+    <% } %>
+    <% if (theme.plugins.baidu_analytics) { %>
+        <%- partial('plugin/baidu-analytics') %>
+    <% } %>
+<% } else { %>
+    <% if (theme.plugins.lightgallery) { %>
+        <%- js('libs/lightgallery/js/lightgallery.min') %>
+        <%- js('libs/lightgallery/js/lg-zoom.min') %>
+    <% } %>
+    <% if (theme.plugins.justifiedgallery) { %>
+        <%- js('libs/justified-gallery/jquery.justifiedGallery.min') %>
+    <% } %>
+    <% if (theme.plugins.mathjax) { %>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                showProcessingMessages: false,
+                messageStyle: "none",
+                extensions: ["tex2jax.js"],
+                jax: ["input/TeX", "output/HTML-CSS"],
+                tex2jax: {
+                    inlineMath:  [ ["$", "$"] ],
+                    displayMath: [ ["$$","$$"] ],
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'],
+                    ignoreClass:"comment-content"
+                },
+                "HTML-CSS": {
+                    availableFonts: ["STIX","TeX"]
+                }
+            });
+            var mathId = document.getElementById("gitalk-container");
+            if (mathId != null) {
+                window.onload = function() {
+                    $(".gt-container").bind("DOMNodeInserted", function() {
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub], document.getElementById("gitalk-container"));
+                    })
+                    MathJax.Hub.Queue(["Typeset", MathJax.Hub], mathId);
+                }
+            }
+        </script>
+        <script src="<%- theme.CDN.mathjax %>?config=TeX-AMS-MML_HTMLorMML" async="async">
+    <% } %>
+<% } %>
