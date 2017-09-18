@@ -3,11 +3,12 @@ title: 「CF-633C」Spy Syndrome 2-Hash+map
 date: 2017-01-02 16:59:15
 tags:
   - Hash
-  - map
+  - STL
   - 字符串
 categories:
-  - oi
+  - OI
   - 字符串
+  - Hash
 ---
 After observing the results of Spy Syndrome, Yash realised the errors of his ways. He now believes that a super spy such as Siddhant can't use a cipher as basic and ancient as Caesar cipher. After many weeks of observation of Siddhant’s sentences, Yash determined a new cipher technique.
 

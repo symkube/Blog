@@ -5,7 +5,7 @@ tags:
   - 图论
   - Tarjan
 categories:
-  - oi
+  - OI
   - 图论
   - Tarjan
 ---

@@ -5,7 +5,7 @@ tags:
   - DP
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 数位dp模板，记忆化搜索，dp[pos][pre][status]。
@@ -24,7 +24,7 @@ int dp[10][10][2], digits[10];
  *@limit 是否受限,也即当前处理这位能否随便取值
  */
 int dfs(int pos, int pre, int status, int limit) {
-	/*已搜到尽头,返回"是否找到了答案"这个状态*/
+    /*已搜到尽头,返回"是否找到了答案"这个状态*/
     if(pos < 1) return status;
     /*dp里保存的是完整的,也即不受限的答案,所以如果满足的话,可以直接返回*/
     if(!limit && dp[pos][pre][status] != -1)
@@ -41,24 +41,24 @@ int dfs(int pos, int pre, int status, int limit) {
 }
 /*从高位往低位dp*/
 inline int solve(int x) {
-	register int len = 0;
-	while(x) {
-		digits[++len] = x % 10;
-		x /= 10;
-	}
-	return dfs(len, 0, 0, 1);
+    register int len = 0;
+    while(x) {
+        digits[++len] = x % 10;
+        x /= 10;
+    }
+    return dfs(len, 0, 0, 1);
 }
 
 int main(int argc, char const *argv[]) {
-	ios::sync_with_stdio(false);
-	cin.tie(NULL);
-	memset(dp, -1, sizeof(dp));
-	int a, b;
-	cin >> a >> b;
-	register int ans = solve(b);
-	memset(dp, -1, sizeof(dp));
-	cout << b - (ans - solve(a - 1)) - a + 1;
-	return 0;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    memset(dp, -1, sizeof(dp));
+    int a, b;
+    cin >> a >> b;
+    register int ans = solve(b);
+    memset(dp, -1, sizeof(dp));
+    cout << b - (ans - solve(a - 1)) - a + 1;
+    return 0;
 }
 ```
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22772576&auto=1&height=66"></iframe>

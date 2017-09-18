@@ -5,7 +5,7 @@ tags:
   - 数学
   - 质因数分解
 categories:
-  - oi
+  - OI
   - 数学
 ---
 Given a positive integer X, an X-factor chain of length m is a sequence of integers,

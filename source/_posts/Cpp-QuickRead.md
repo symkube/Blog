@@ -4,7 +4,7 @@ date: 2016-06-23 23:11:59
 tags:
   - IO
 categories: 
-  - oi
+  - OI
   - IO
 ---
 ## C++加速输入

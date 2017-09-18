@@ -4,7 +4,7 @@ date: 2016-07-16 21:44:35
 tags:
   - DP
 categories: 
-  - oi
+  - OI
   - DP
 ---
 ## 麻烦的聚餐

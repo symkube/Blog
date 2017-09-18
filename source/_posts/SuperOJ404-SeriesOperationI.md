@@ -5,7 +5,7 @@ tags:
   - 数据结构
   - 线段树
 categories:
-  - oi
+  - OI
   - 数据结构
   - 线段树
 ---

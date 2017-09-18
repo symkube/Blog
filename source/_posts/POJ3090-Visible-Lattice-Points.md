@@ -6,7 +6,7 @@ tags:
   - 欧拉函数
   - 线筛
 categories:
-  - oi
+  - OI
   - 数学
 ---
 A lattice point (x, y) in the first quadrant (x and y are integers greater than or equal to 0), other than the origin, is visible from the origin if the line from (0, 0) to (x, y) does not pass through any other lattice point. For example, the point (4, 2) is not visible since the line from the origin passes through (2, 1). The figure below shows the points (x, y) with 0  \leq  x, y  \leq  5 with lines from the origin to the visible points.

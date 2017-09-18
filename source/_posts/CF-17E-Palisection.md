@@ -5,7 +5,7 @@ tags:
   - 字符串
   - 乱搞
 categories:
-  - oi
+  - OI
   - 字符串
 ---
 In an English class Nick had nothing to do at all, and remembered about wonderful strings called palindromes. We should remind you that a string is called a palindrome if it can be read the same way both from left to right and from right to left. Here are examples of such strings: «eye», «pop», «level», «aba», «deed», «racecar», «rotor», «madam».

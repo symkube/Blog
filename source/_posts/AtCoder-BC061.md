@@ -2,10 +2,8 @@
 title: 「AtCoder BC061」题解
 date: 2017-05-13 22:12:40
 tags:
-  - AtCoder
 categories:
-  - oi
-  - AtCoder
+  - OI
 ---
 我并没有去打 CF，然后就跑去打第一场 AtCoder 刷水...
 ### 链接

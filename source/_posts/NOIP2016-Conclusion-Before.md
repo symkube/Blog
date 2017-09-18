@@ -3,7 +3,7 @@ title: NOIP赛前总结
 date: 2016-11-15 19:56:02
 tags:
 categories:
-  - oi
+  - OI
 ---
 ## NOIP赛前总结
 ### 算法

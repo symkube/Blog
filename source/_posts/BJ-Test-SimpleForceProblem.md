@@ -5,33 +5,33 @@ tags:
   - 数学
   - 二项式定理
 categories:
-  - oi
+  - OI
   - 数学
 ---
-问题很简单，已知 $n, k, s(l)$，$\forall i \in N^+, i \leq n$，求 $\sum_{j = 1}^i (\sum_{l = j}^i s(l))^k) \text{ mod } 1000000007$。
+问题很简单，已知 $n, k, s(l)$，$\forall i \in N^+, i \leq n$，求 {% raw %}$\sum\limits_{j = 1}^i (\sum\limits_{l = j}^i s(l))^k) \text{ mod } 1000000007${% endraw %}。
 即求:
 <center>
-
-$\sum_{j = 1}^1 (\sum_{l = j}^1 s(l))^k) \text{ mod } 1000000007$
+{% raw %}
+$\sum\limits_{j = 1}^1 (\sum\limits_{l = j}^1 s(l))^k) \text{ mod } 1000000007$
 <br>
-$\sum_{j = 1}^2 (\sum_{l = j}^2 s(l))^k) \text{ mod } 1000000007$
+$\sum\limits_{j = 1}^2 (\sum\limits_{l = j}^2 s(l))^k) \text{ mod } 1000000007$
 <br>
 $\cdots$
 <br>
-$\sum_{j = 1}^n (\sum_{l = j}^n s(l))^k) \text{ mod } 1000000007$
-
+$\sum\limits_{j = 1}^n (\sum\limits_{l = j}^n s(l))^k) \text{ mod } 1000000007$
+{% endraw %}
 </center>
 
-共 $n$ 个数，其中 $\sum_{i = a}^b f(i)$ 表示 $f(a) + \cdots + f(b)$ 的和。
+共 $n$ 个数，其中 $\sum\limits_{i = a}^b f(i)$ 表示 $f(a) + \cdots + f(b)$ 的和。
 
 <!-- more -->
 ### 链接
 [THOJ25](http://thoj.xehoth.cc/problem/25)
 
 ### 题解
-对于 $k$ 的整数倍的数，用二项式定理算出 $F(i - k, 1) \cdots F(i - k, k)$ 对 $F(i, 1) \cdots F(i, k)$ 的贡献，而 $i - k + 1 ~ i - 1$ 的数暴力计算贡献，对于 $k$ 的非整数倍位置上的数，利用上一个整数倍位置的数，以及快速幂直接计算 $F(i, k)$。
+对于 $k$ 的整数倍的数，用二项式定理算出 $F(i - k, 1) \cdots F(i - k, k)$ 对 $F(i, 1) \cdots F(i, k)$ 的贡献，而 $i - k + 1 \sim i - 1$ 的数暴力计算贡献，对于 $k$ 的非整数倍位置上的数，利用上一个整数倍位置的数，以及快速幂直接计算 $F(i, k)$。
 
-时间复杂度为 $O(\frac {n} {k} \times (k^2 + k^ \text{ log } k) + (n - \frac {n} {k}) \times (k + k \text{ log } k)) = O(nk \text{ log } k)$
+时间复杂度为 {% raw %}$O(\frac {n} {k} \times (k^2 + k^ \text{ log } k) + (n - \frac {n} {k}) \times (k + k \text{ log } k)) = O(nk \text{ log } k)${% endraw %}
 
 ### 代码
 ``` cpp

@@ -5,7 +5,7 @@ tags:
   - 数学
   - 扩展欧几里德
 categories:
-  - oi
+  - OI
   - 数学
 ---
 Elina is reading a book written by Rujia Liu, which introduces a strange way to express non-negative integers. The way is described as following:

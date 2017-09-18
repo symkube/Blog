@@ -6,7 +6,7 @@ tags:
   - Tarjan
   - 2-SAT
 categories:
-  - oi
+  - OI
   - 图论
   - Tarjan
 ---

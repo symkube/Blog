@@ -5,7 +5,7 @@ tags:
   - STL
   - 可并堆
 categories:
-  - oi
+  - OI
   - 数据结构
   - 可并堆
 ---

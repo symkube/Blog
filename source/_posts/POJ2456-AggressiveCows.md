@@ -4,7 +4,7 @@ date: 2016-07-05 14:49:56
 tags:
   - 二分
 categories:
-  - oi
+  - OI
   - 二分
 ---
 ## Aggressive cows

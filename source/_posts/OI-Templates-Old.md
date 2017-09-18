@@ -3,7 +3,7 @@ title: OI 模板总结
 date: 2016-09-12 22:28:28
 tags:
 categories:
-  - oi
+  - OI
 ---
 ## OI模板总结
 ## 数学模板

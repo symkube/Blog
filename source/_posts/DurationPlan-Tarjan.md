@@ -6,7 +6,7 @@ tags:
   - 图论
   - Tarjan
 categories:
-  - oi
+  - OI
   - 补档计划
 ---
 复习 Tarjan 算法以及一些常见的应用。

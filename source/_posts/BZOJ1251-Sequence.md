@@ -2,11 +2,10 @@
 title: 「BZOJ 1251」序列终结者 - Splay
 date: 2016-12-19 21:33:02
 tags:
-  - Splay
   - 数据结构
   - 平衡树
 categories:
-  - oi
+  - OI
   - 数据结构
   - 平衡树
 ---

@@ -5,7 +5,7 @@ tags:
   - 补档计划
   - 并查集
 categories:
-  - oi
+  - OI
   - 补档计划
 ---
 并查集 (Union-Find Set) 是一种非常精巧而实用的数据结构，它主要用于处理一些不相交集合的合并问题。一些常见的用途有求连通子图,求最小生成树的 `Kruskal` 算法和求最近公共祖先（Least Common Ancestors, LCA）等。

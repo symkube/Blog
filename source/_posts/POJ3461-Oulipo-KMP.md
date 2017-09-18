@@ -5,8 +5,9 @@ tags:
   - KMP
   - 字符串
 categories:
-  - oi
+  - OI
   - 字符串
+  - KMP
 ---
 The French author Georges Perec (1936–1982) once wrote a book, La disparition, without the letter 'e'. He was a member of the Oulipo group. A quote from the book:
 

@@ -4,7 +4,7 @@ date: 2016-07-25 21:40:15
 tags:
   - IO
 categories: 
-  - oi
+  - OI
   - IO
 ---
 ## IO优化模板

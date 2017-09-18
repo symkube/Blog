@@ -6,7 +6,7 @@ tags:
   - 补档计划
   - 数论
 categories:
-  - oi
+  - OI
   - 补档计划
 ---
 关于数论的总结和专题练习....
@@ -90,7 +90,7 @@ $$x \equiv a_1 \  (\text{mod } m_1)$$
 $$x \equiv a_2 \  (\text{mod } m_2)$$
 $$\cdots$$
 $$x \equiv a_n \  (\text{mod } m_n)$$
-有整数解，并且在模 $M = m_1 \cdot m_2 \cdot _\cdots \cdot m_n$ 解是唯一的，$x = \sum_{i = 1} ^ n a_iM_iM_i ^ {-1} \text{ mod M}$，其中 $M_i = M \ / \ m_i$，$M_i ^ {-1}$ 为 $M_i$ 模 $m_i$ 的逆元。
+有整数解，并且在模 {% raw %}$M = m_1 \cdot m_2 \cdot _\cdots \cdot m_n${% endraw %} 解是唯一的，{% raw %}$x = \sum_{i = 1} ^ n a_iM_iM_i ^ {-1} \text{ mod M}${% endraw %}，其中 {% raw %}$M_i = M \ / \ m_i$，$M_i ^ {-1}${% endraw %} 为 $M_i$ 模 $m_i$ 的逆元。
 #### 扩展形式
 基本形式中的 $m_i$ 不再要求互质，此时只能两两求解，$x \equiv a_1 \ (\text{mod } m_1), x \equiv a_2 \ (\text{mod } m_2)$。
 #### 代码
@@ -155,40 +155,40 @@ inline int bsgs(int a, int b, int c) {
 }
 ```
 ### 类欧几里得
-求解形如 $\sum_{x = 0} ^ n \lfloor \frac {ax + b} {c} \rfloor$。
+求解形如 {% raw %}$\sum_{x = 0} ^ n \lfloor \frac {ax + b} {c} \rfloor${% endraw %}。
 
-我们令 $S_d(n) = \sum_{x = 0} ^ n x ^ d$。  
+我们令 {% raw %}$S_d(n) = \sum_{x = 0} ^ n x ^ d${% endraw %}。  
 1. 若 $a \geq c$，则令 $d = \lfloor \frac {a} {c} \rfloor$，有
-$$\sum ^ {n}_{x = 0} \lfloor \frac{ax + b}{c} \rfloor = \sum ^ {n}_{x = 0}(\lfloor \frac {(a \% c)x + b}{c}\rfloor + d * x) = d * S_1(n) + \sum_{x = 0} ^ n\lfloor \frac{(a \% c)x + b}{c} \rfloor$$
+{% raw %}$$\sum ^ {n}_{x = 0} \lfloor \frac{ax + b}{c} \rfloor = \sum ^ {n}_{x = 0}(\lfloor \frac {(a \% c)x + b}{c}\rfloor + d * x) = d * S_1(n) + \sum_{x = 0} ^ n\lfloor \frac{(a \% c)x + b}{c} \rfloor$${% endraw %}
 2. 若 $b \geq c$，则令 $d = \lfloor \frac {b} {c} \rfloor$，有
-$$\sum ^ {n}_{x = 0} \lfloor \frac{ax + b}{c} \rfloor = \sum ^ {n}_{x = 0}(\lfloor \frac{ax + (b \% c)}{c}\rfloor + d) = d * S_0(n) + \sum ^ {n}_{x = 0} \lfloor \frac{ax + (b \% c)}{c} \rfloor$$
+{% raw %}$$\sum ^ {n}_{x = 0} \lfloor \frac{ax + b}{c} \rfloor = \sum ^ {n}_{x = 0}(\lfloor \frac{ax + (b \% c)}{c}\rfloor + d) = d * S_0(n) + \sum ^ {n}_{x = 0} \lfloor \frac{ax + (b \% c)}{c} \rfloor$${% endraw %}
 3. 若 $a < c, b < c$ 时，令 $M = \lfloor \frac {an + b} {c} \rfloor$，有
-$$\sum ^ {n}_{x = 0} \lfloor \frac{ax + b}{c} \rfloor = \sum ^ {n}_{x = 0} \sum ^ {M}_{y = 1}[y \leq \lfloor \frac{ax + b}{c} \rfloor]$$
+{% raw %}$$\sum ^ {n}_{x = 0} \lfloor \frac{ax + b}{c} \rfloor = \sum ^ {n}_{x = 0} \sum ^ {M}_{y = 1}[y \leq \lfloor \frac{ax + b}{c} \rfloor]$${% endraw %}
 即
-$$\sum ^ {n}_{x = 0} \sum ^ {M - 1}_{y = 0}[y + 1 \leq \lfloor \frac{ax + b}{c} \rfloor]$$
+{% raw %}$$\sum ^ {n}_{x = 0} \sum ^ {M - 1}_{y = 0}[y + 1 \leq \lfloor \frac{ax + b}{c} \rfloor]$${% endraw %}
 接下来化简 $y + 1 \leq \lfloor \frac {ax + b} {c} \rfloor$，有
-$$c * y + c - b \leq a * x$$
-$$c * y + c - b - 1 < a * x$$
-$$x > \lfloor \frac {c * y + c - b - 1} {a} \rfloor$$
+{% raw %}$$c \times y + c - b \leq a \times x$${% endraw %}
+$$c \times y + c - b - 1 < a \times x$$
+$$x > \lfloor \frac {c \times y + c - b - 1} {a} \rfloor$$
 故原式
-$$\begin {matrix}
+{% raw %}$$\begin {aligned}
 = &\sum ^ {M - 1}_{y = 0}\sum ^ {n}_{x = 0}[x > \lfloor \frac{c * y + c - b - 1}{a} \rfloor]&\\
 = &\sum ^ {M - 1}_{y = 0}(n - \lfloor \frac{c * y + c - b - 1}{a}\rfloor) &\\
 = &n * M - \sum ^ {M - 1}_{y = 0} \lfloor \frac{c * y + c - b - 1}{a}\rfloor &\\
-\end {matrix}$$
+\end {aligned}$${% endraw %}
 
 由于 $a < c$ 时 $\lfloor \frac {a} {c} \rfloor = 0$，$b < c$ 时 $\lfloor \frac {b} {c} \rfloor = 0$，所以我们可以将 1, 2 两种情况合并，即令
 $$f(a, b, c, n) = \sum_{x = 0} ^ n \lfloor \frac {ax + b} {c} \rfloor$$
 那么 $a \geq c$ 或 $b \geq c$ 时，有
-$$f(a, b, c, n) = \lfloor \frac {a} {c} \rfloor * S_1(n) + \lfloor \frac {b} {c} \rfloor * S_0(n) + f(a \% c, b \% c, c, n)$$
+{% raw %}$$f(a, b, c, n) = \lfloor \frac {a} {c} \rfloor * S_1(n) + \lfloor \frac {b} {c} \rfloor * S_0(n) + f(a \% c, b \% c, c, n)$${% endraw %}
 将 $S_d(n)$ 代入，得
-$$f(a, b, c, n) = \lfloor \frac {a} {c} \rfloor * \frac {n * (n + 1)} {2} + \lfloor \frac {b} {c} \rfloor * (n + 1) + f(a \% c, b \% c, c, n)$$
+{% raw %}$$f(a, b, c, n) = \lfloor \frac {a} {c} \rfloor * \frac {n * (n + 1)} {2} + \lfloor \frac {b} {c} \rfloor * (n + 1) + f(a \% c, b \% c, c, n)$${% endraw %}
 当 $a < c$ 且 $b < c$ 时，有
-$$f(a, b, c, n) = n * M - f(c, c - b - 1, a, M - 1)$$
+{% raw %}$$f(a, b, c, n) = n * M - f(c, c - b - 1, a, M - 1)$${% endraw %}
 把 $M$ 代入，得
-$$f(a, b, c, n) = n * \lfloor \frac {an + b} {c} \rfloor - f(c, c - b - 1, a, \lfloor \frac {an + b} {c} \rfloor - 1)$$
+{% raw %}$$f(a, b, c, n) = n * \lfloor \frac {an + b} {c} \rfloor - f(c, c - b - 1, a, \lfloor \frac {an + b} {c} \rfloor - 1)$${% endraw %}
 当 $a = 0$ 时，即为该算法的边界，此时
-$f(a, b, c, n) = \lfloor \frac {b} {c} \rfloor * (n + 1)$
+{% raw %}$f(a, b, c, n) = \lfloor \frac {b} {c} \rfloor * (n + 1)${% endraw %}
 
 我们可以发现 $(a, c)$ 会变化为 $(c, a \% c)$，故这个算法被称为类欧几里德算法。
 #### 代码
@@ -210,7 +210,7 @@ inline long classEuclid(long a, long b, long c, long n) {
 ### 欧拉函数
 欧拉函数 $\varphi (n)$: $\varphi (n)$ 表示 $\left [1, n \right ]$ 中与 $n$ 互质的整数的个数。
 
-> 通式: $\varphi (n) = \sum_{i = 1}^{n} \left [ gcd(i, n) = 1 \right ] = n \prod_{i = 1}^n \left ( 1 - \frac{1} {p_i} \right )$，其中 $p_i$ 为 $n$ 的所有质因数，$n$ 为不是 $0$ 的整数。
+> 通式: {% raw %}$\varphi (n) = \sum_{i = 1}^{n} \left [ gcd(i, n) = 1 \right ] = n \prod_{i = 1}^n \left ( 1 - \frac{1} {p_i} \right )${% endraw %}，其中 $p_i$ 为 $n$ 的所有质因数，$n$ 为不是 $0$ 的整数。
 
 #### 一些性质
 1. $\varphi (1) = 1$。
@@ -219,8 +219,8 @@ inline long classEuclid(long a, long b, long c, long n) {
 4. 当 $n > 1$ 时，$\sum_{i = 1}^{n} i \cdot \left [ gcd(i, n) = 1 \right ] = \frac{n \cdot \varphi(n)} {2}$。
 5. 欧拉定理：对于互质的整数 $a, n$，有 $a ^ {\varphi(n)} \equiv 1 \ (\text{mod n})$，那么 $a ^ x \equiv a ^ {x \text{ mod } \varphi(n)} \ (\text{mod n})$。
 6. 扩展欧拉定理：对于不互质的整数 $a, n$，$a ^ x \equiv a ^ {x \text{ mod } \varphi(n) + \varphi(n)} \ (\text{mod }n)(x \geq \varphi(n))$。
-7. 若 $p \ | \ i$，$p$ 是质数，那么 $\varphi(i * p) = p * \varphi(i)$，否则 $\varphi(p * i) = (p - 1) * \varphi(i)$
-8. $\sum_{d | n}\varphi(d) = n$
+7. 若 $p \ | \ i$，$p$ 是质数，那么 {% raw %}$\varphi(i * p) = p * \varphi(i)${% endraw %}，否则 {% raw %}$\varphi(p * i) = (p - 1) * \varphi(i)${% endraw %}
+8. {% raw %}$\sum_{d | n}\varphi(d) = n${% endraw %}
 
 #### 求 phi
 根据通式暴力求解即可，复杂度 $O(\sqrt{n})$，可以使用 Pollard-Rho 将复杂度降为 $O(\sqrt[4]{n})$。
@@ -240,29 +240,29 @@ inline int getPhi(int p) {
 ### 狄利克雷（Dirichlet）卷积
 #### 定义
 定义两个数论函数 $f$, $g$ 的 $Dirichlet$ 卷积：
-$$(f * g)(n) = \sum_{d | n} f(d) g(\frac{n} {d})$$
+{% raw %}$$(f * g)(n) = \sum_{d | n} f(d) g(\frac{n} {d})$${% endraw %}
 
 #### 一些常见积性函数
-1. 除数函数 $\sigma(n)$ 表示 $n$ 的所有正因子之和，即 $\sigma(n) = \sum_{d | n \text{ and } d > 0} d$，$d(n)$ 表示 $n$ 的正因子个数，即 $d(n) = \sum_{d | n}1$。
+1. 除数函数 $\sigma(n)$ 表示 $n$ 的所有正因子之和，即 {% raw %}$\sigma(n) = \sum_{d | n \text{ and } d > 0} d${% endraw %}，$d(n)$ 表示 $n$ 的正因子个数，即 $d(n) = \sum_{d | n}1$。
 2. 恒等函数 $id(n) = n$。
 3. 单位函数 $\epsilon (n) = \left [ n = 1 \right ]$。
 4. 常函数 $1(n) = 1$。
 
 #### 一些性质
-1. 交换律：$f * g = g * f$
-2. 结合律：$f * g * h = f * (g * h)$
-3. 分配率：$f * (g + h) = f * g + f * h$
-4. 单位元：$f * \epsilon = \epsilon * f$
+1. 交换律：{% raw %}$f * g = g * f${% endraw %}
+2. 结合律：{% raw %}$f * g * h = f * (g * h)${% endraw %}
+3. 分配率：{% raw %}$f * (g + h) = f * g + f * h${% endraw %}
+4. 单位元：{% raw %}$f * \epsilon = \epsilon * f${% endraw %}
 
 #### 常见卷积
-1. $d(n) = \sum_{d | n}1 = \sum_{d | n}1(d)1( \frac{n} {d} ) = 1 * 1$
-2. $\sigma (n) = \sum_{d | n}d = \sum_{d | n}d(d)1( \frac{n} {d} ) = d * 1$
-3. $\varphi (n) = \sum_{d | n} \mu (d) \frac{n} {d} = \sum_{d | n} \mu (d)id( \frac{n} {d}) = \mu * id$
-4. $\epsilon (n) = \sum_{d | n} \mu (d) = \sum_{d | n} \mu (d)1( \frac{n} {d}) = \mu * 1$
+1. {% raw %}$d(n) = \sum_{d | n}1 = \sum_{d | n}1(d)1( \frac{n} {d} ) = 1 * 1${% endraw %}
+2. {% raw %}$\sigma (n) = \sum_{d | n}d = \sum_{d | n}d(d)1( \frac{n} {d} ) = d * 1${% endraw %}
+3. {% raw %}$\varphi (n) = \sum_{d | n} \mu (d) \frac{n} {d} = \sum_{d | n} \mu (d)id( \frac{n} {d}) = \mu * id${% endraw %}
+4. {% raw %}$\epsilon (n) = \sum_{d | n} \mu (d) = \sum_{d | n} \mu (d)1( \frac{n} {d}) = \mu * 1${% endraw %}
 
 #### 一些变换
-1. 由于 $\varphi = \mu * id$，$\epsilon = \mu * 1$，所以 $1 * \varphi = 1 * \mu * id$，所以 $1 * \varphi = \epsilon * id = id$，即 $\sum_{d | n} \varphi (d) = n$。
-2. 由于 $\epsilon  = \mu * 1$，$\sum_{d | n} \mu (d) = \left [ n = 1 \right ]$
+1. 由于 {% raw %}$\varphi = \mu * id$，$\epsilon = \mu * 1${% endraw %}，所以 {% raw %}$1 * \varphi = 1 * \mu * id${% endraw %}，所以 {% raw %}$1 * \varphi = \epsilon * id = id${% endraw %}，即 {% raw %}$\sum_{d | n} \varphi (d) = n${% endraw %}。
+2. 由于 {% raw %}$\epsilon  = \mu * 1$，$\sum_{d | n} \mu (d) = \left [ n = 1 \right ]${% endraw %}
 
 #### 预处理 Dirichlet 卷积
 若已知数论函数 $f, g$ ，可以用 $O(n \log n)$ 的时间预处理出 $f * g$。
@@ -280,41 +280,40 @@ inline void calculateDirichletProduct(int n) {
 
 ### 莫比乌斯函数
 #### 定义
-$$
-\mu(n) =
+{% raw %}$$\mu(n) =
 \left\{\begin{matrix}
 1 & n = 1 \\
 (-1)^k & n = p_1p_2 \cdots p_k \\
 0 & otherwise
 \end{matrix}\right.
-$$
+$${% endraw %}
 #### 性质
 **性质一：**莫比乌斯函数是积性函数。
 $$\mu(a) \mu(b) = \mu(a \cdot b)$$
 
 **性质二：**
-$$\sum_{d\mid n}\mu(d) = [n = 1]$$
+{% raw %}$$\sum_{d\mid n}\mu(d) = [n = 1]$${% endraw %}
 **证明**：
 设 $n$ 有 $k (k > 0)$ 个不同的质因子，则 $n$ 所有的质因子中 $\mu \neq 0$ 的只有所有质因子次数都为 $1$ 的因子，质因子个数为 $1$ 的因子有 $\binom{k}{i}$ 个，再利用二项式定理可以得到
-$$\sum_{d | n} \mu (d) = \sum_{i = 0}^{k}(-1)^i \cdot \binom{k}{i} = (1 - 1)^k = 0$$
-当 $n = 1$ 时原式为 $1$，因此 $\sum_{d | n} \mu (d) = \left [ n = 1 \right ]$
+{% raw %}$$\sum_{d | n} \mu (d) = \sum_{i = 0}^{k}(-1)^i \cdot \binom{k}{i} = (1 - 1)^k = 0$${% endraw %}
+当 $n = 1$ 时原式为 $1$，因此 {% raw %}$\sum_{d | n} \mu (d) = \left [ n = 1 \right ]${% endraw %}
 
-> 一个结论：$\sum_{d|n}\frac{\mu(d)}{d} = \frac{\varphi(n)}{n}$
+> 一个结论：{% raw %}$\sum_{d|n}\frac{\mu(d)}{d} = \frac{\varphi(n)}{n}${% endraw %}
 
 ### 莫比乌斯反演
 如果 $f(n),\ g(n)$ 是数论函数，且满足：
-$$f(n) = \sum_{d\mid n}g(d)$$
+{% raw %}$$f(n) = \sum_{d\mid n}g(d)$${% endraw %}
 则有莫比乌斯反演：
-$$g(n) = \sum_{d\mid n}\mu(\frac n d)f(d) = \sum_{d\mid n}\mu(d)f(\frac n d)$$
-即 $f = g * 1 \Leftrightarrow g = \mu * f$。  
+{% raw %}$$g(n) = \sum_{d\mid n}\mu(\frac n d)f(d) = \sum_{d\mid n}\mu(d)f(\frac n d)$${% endraw %}
+即 {% raw %}$f = g * 1 \Leftrightarrow g = \mu * f${% endraw %}。  
 **证明：**  
-若 $f = g * 1$， 则 $f * \mu = g * (1 * \mu) = g * \epsilon = g$  
-若 $g = \mu * f$，则 $g * 1 = \mu * f * 1 = \mu * 1 * f = \epsilon * f = f$
+若 {% raw %}$f = g * 1${% endraw %}，则 {% raw %}$f * \mu = g * (1 * \mu) = g * \epsilon = g${% endraw %}
+若 {% raw %}$g = \mu * f${% endraw %}，则 {% raw %}$g * 1 = \mu * f * 1 = \mu * 1 * f = \epsilon * f = f${% endraw %}
 
 #### 变形
-$$f(x)=\sum_{x|d}g(d) \Leftrightarrow g(x)=\sum_{x|d}\mu(\frac{d}{x})f(d)$$
+{% raw %}$$f(x)=\sum_{x|d}g(d) \Leftrightarrow g(x)=\sum_{x|d}\mu(\frac{d}{x})f(d)$${% endraw %}
 
-$$f(i) = \sum_{d = 1}^{\left\lfloor\frac n i\right\rfloor}g(d\cdot i)\Rightarrow g(i) = \sum_{d = 1}^{\left\lfloor\frac n i\right\rfloor}f(d\cdot i)\mu(d)$$
+{% raw %}$$f(i) = \sum_{d = 1}^{\left\lfloor\frac n i\right\rfloor}g(d\cdot i)\Rightarrow g(i) = \sum_{d = 1}^{\left\lfloor\frac n i\right\rfloor}f(d\cdot i)\mu(d)$${% endraw %}
 
 ### 杜教筛
 #### 前置技能
@@ -327,30 +326,30 @@ $$f(i) = \sum_{d = 1}^{\left\lfloor\frac n i\right\rfloor}g(d\cdot i)\Rightarrow
 
 ##### 二
 设 $f, g$ 为两个数论函数，$t$ 为一个完全积性函数，且 $t(1) = 1$，有
-$$f(n) = \sum_{k = 1} ^ {n}t(k)g(\lfloor \frac n k \rfloor) \Leftrightarrow g(n) = \sum_{k = 1} ^ n \mu(k)t(k)f(\lfloor \frac n k \rfloor)$$
+{% raw %}$$f(n) = \sum_{k = 1} ^ {n}t(k)g(\lfloor \frac n k \rfloor) \Leftrightarrow g(n) = \sum_{k = 1} ^ n \mu(k)t(k)f(\lfloor \frac n k \rfloor)$${% endraw %}
 
 **证明：**
 考虑将原式代入，根据结论一得
-$$\begin{aligned}\sum_{k = 1} ^ n \mu(k)t(k)f(\lfloor \frac n k \rfloor) &= \sum_{k = 1} ^ n\mu(k)t(k)\sum_{i = 1} ^ {\lfloor \frac n k \rfloor}t(i)g(\lfloor \frac {n} {ki} \rfloor) \\
+{% raw %}$$\begin{aligned}\sum_{k = 1} ^ n \mu(k)t(k)f(\lfloor \frac n k \rfloor) &= \sum_{k = 1} ^ n\mu(k)t(k)\sum_{i = 1} ^ {\lfloor \frac n k \rfloor}t(i)g(\lfloor \frac {n} {ki} \rfloor) \\
 &= \sum_{j = 1} ^ n g(\lfloor \frac n j \rfloor)\sum_{i | j}\mu(i)t(i)t(\frac j i) \\
 &= \sum_{j = 1} ^ n g(\lfloor \frac n j \rfloor)t(j)\sum_{i | j}\mu(i)
-\end{aligned}$$
+\end{aligned}$${% endraw %}
 由莫比乌斯反演的卷积形式得
-$$\begin{aligned}\sum_{k = 1} ^ n\mu(k)t(k)f(\lfloor n k \rfloor) &= \sum_{j = 1} ^ ng(\lfloor \frac n j \rfloor)t(j)\epsilon(j) \\
+{% raw %}$$\begin{aligned}\sum_{k = 1} ^ n\mu(k)t(k)f(\lfloor n k \rfloor) &= \sum_{j = 1} ^ ng(\lfloor \frac n j \rfloor)t(j)\epsilon(j) \\
 &= g(n)g(1) \\
 &= g(n)
-\end{aligned}$$
+\end{aligned}$${% endraw %}
 反之亦然。
 
 #### 主要形式
 设 $f(n)$ 为一个数论函数，求
-$$S(n) = \sum_{i = 1} ^ n f(i)$$
+{% raw %}$$S(n) = \sum_{i = 1} ^ n f(i)$${% endraw %}
 
 根据函数 $f(n)$ 的性质，构造一个 $S(n)$ 关于 $S(\lfloor \frac n i \rfloor)$ 的递推式，如：  
 找到一个合适的数论函数 $g(n)$
-$$\sum_{i = 1} ^ n \sum_{d | i}f(d)g(\frac i d) = \sum_{T = 1} ^ ng(T)\sum_{i = 1} ^ {\lfloor \frac n T \rfloor}f(i) = \sum_{i = 1} ^ ng(i)S(\lfloor \frac n i \rfloor)$$
+{% raw %}$$\sum_{i = 1} ^ n \sum_{d | i}f(d)g(\frac i d) = \sum_{T = 1} ^ ng(T)\sum_{i = 1} ^ {\lfloor \frac n T \rfloor}f(i) = \sum_{i = 1} ^ ng(i)S(\lfloor \frac n i \rfloor)$${% endraw %}
 可以得到递推式
-$$g(1)S(n) = \sum_{i = 1} ^ n(f * g)(i) - \sum_{i = 2} ^ ng(i)S(\lfloor \frac n i \rfloor)$$
+{% raw %}$$g(1)S(n) = \sum_{i = 1} ^ n(f * g)(i) - \sum_{i = 2} ^ ng(i)S(\lfloor \frac n i \rfloor)$${% endraw %}
 
 ### 「HDU 3579」Hello Kiki
 #### 链接
@@ -510,18 +509,18 @@ inline InputOutputStream &InputOutputStream::operator<<(T x) {
 [BZOJ 1101](http://www.lydsy.com/JudgeOnline/problem.php?id=1101)
 #### 题解
 此题就是求
-$$\sum_{i = 1} ^ n \sum_{j = 1} ^ m [\gcd(i, j) = k]$$
+{% raw %}$$\sum_{i = 1} ^ n \sum_{j = 1} ^ m [\gcd(i, j) = k]$${% endraw %}
 令 $f(k)$ 为 $\gcd(i, j) = k$ 的个数，$g(k)$ 为 $k \ | \ \gcd(i, j)$ 的对数，则
-$$g(k) = \sum_{x = 1} ^ {\lfloor \frac n k \rfloor}f(k \cdot x)$$
-若 $i, j$ 能被 $k$ 整除，那么它们可以写成 $i = k * x_1, j = k * x_2$，的形式，我们只需要求有多少对 $x_1, x_2$ 即可，则
-$$g(k) = \lfloor \frac n k \rfloor \lfloor \frac m k \rfloor$$
+{% raw %}$$g(k) = \sum_{x = 1} ^ {\lfloor \frac n k \rfloor}f(k \cdot x)$${% endraw %}
+若 $i, j$ 能被 $k$ 整除，那么它们可以写成 {% raw %}$i = k * x_1, j = k * x_2${% endraw %}，的形式，我们只需要求有多少对 {% raw %}$x_1, x_2${% endraw %} 即可，则
+{% raw %}$$g(k) = \lfloor \frac n k \rfloor \lfloor \frac m k \rfloor$${% endraw %}
 根据莫比乌斯反演的变形可得
-$$\begin{aligned}f(k) &= \sum_{x = 1}^{\left\lfloor\frac n k\right\rfloor}\mu(x)g(k\cdot x)\\&=\sum_{x = 1}^{\left\lfloor\frac n k\right\rfloor}\mu(x)\left\lfloor\frac n {kx}\right\rfloor\left\lfloor\frac m {kx}\right\rfloor\end{aligned}$$
+{% raw %}$$\begin{aligned}f(k) &= \sum_{x = 1}^{\left\lfloor\frac n k\right\rfloor}\mu(x)g(k\cdot x)\\&=\sum_{x = 1}^{\left\lfloor\frac n k\right\rfloor}\mu(x)\left\lfloor\frac n {kx}\right\rfloor\left\lfloor\frac m {kx}\right\rfloor\end{aligned}$${% endraw %}
 由于 $\lfloor \frac n d \rfloor $ 只有 $O(\sqrt{n})$ 种取值，且取值是连续的，所以 $\lfloor \frac {n} {kx} \rfloor, \lfloor \frac {m} {kx} \rfloor$，同时不变的段数有 $O(\sqrt{n} + \sqrt{m})$ 个。  
 对于相等的段，我们求取 $\mu$ 的前缀和，即可批量计算这个段的答案。
 
 对于位置 $i$，找到下一个相等的位置的代码为 `min(n / (n / i), m / (m / i))`。对于 $n$，我们要找到最大的 $j$，满足：
-$$\lfloor \frac n j \rfloor \geq \lfloor \frac n i \rfloor$$
+{% raw %}$$\lfloor \frac n j \rfloor \geq \lfloor \frac n i \rfloor$${% endraw %}
 可以拆掉左边的底：
 $$\frac n j \geq \lfloor \frac n i \rfloor$$
 化简可得：
@@ -660,36 +659,36 @@ int main() {
 [BZOJ 2820](http://www.lydsy.com/JudgeOnline/problem.php?id=2820)
 #### 题解
 这道题就是求
-$$\sum_{p}\sum_{i = 1} ^ n\sum_{j = 1} ^ m[\gcd(i, j) = p]$$
+{% raw %}$$\sum_{p}\sum_{i = 1} ^ n\sum_{j = 1} ^ m[\gcd(i, j) = p]$${% endraw %}
 其中 $p$ 为质数，令
-$$f(k) = \sum_{i = 1} ^ n\sum_{j = 1} ^ m[\gcd(i, j) = k]$$
+{% raw %}$$f(k) = \sum_{i = 1} ^ n\sum_{j = 1} ^ m[\gcd(i, j) = k]$${% endraw %}
 根据上题的推导我们知道：
-$$f(k) = \sum_{x = 1}^{\left\lfloor\frac n k\right\rfloor}\mu(x)\left\lfloor\frac n {kx}\right\rfloor\left\lfloor\frac m {kx}\right\rfloor$$
+{% raw %}$$f(k) = \sum_{x = 1}^{\left\lfloor\frac n k\right\rfloor}\mu(x)\left\lfloor\frac n {kx}\right\rfloor\left\lfloor\frac m {kx}\right\rfloor$${% endraw %}
 于是
-$$\sum_{p}\sum_{i = 1} ^ n\sum_{j = 1} ^ m[\gcd(i, j) = p] = \sum_p \sum_{x = 1}^{\left\lfloor\frac n p\right\rfloor}\mu(x)\left\lfloor\frac n {px}\right\rfloor\left\lfloor\frac m {px}\right\rfloor$$
+{% raw %}$$\sum_{p}\sum_{i = 1} ^ n\sum_{j = 1} ^ m[\gcd(i, j) = p] = \sum_p \sum_{x = 1}^{\left\lfloor\frac n p\right\rfloor}\mu(x)\left\lfloor\frac n {px}\right\rfloor\left\lfloor\frac m {px}\right\rfloor$${% endraw %}
 令 $T = px$，我们在外层枚举 $T$ 然后对每个质因子计算 $\mu$
-$$\sum_{T = 1} ^ n\lfloor \frac n T \rfloor \lfloor \frac m T \rfloor\sum_{k | T}\mu(\frac T k)$$
+{% raw %}$$\sum_{T = 1} ^ n\lfloor \frac n T \rfloor \lfloor \frac m T \rfloor\sum_{k | T}\mu(\frac T k)$${% endraw %}
 令
-$$f(T) = \sum\limits_{k \mid T} \mu(\frac{T}{k})$$
+{% raw %}$$f(T) = \sum\limits_{k \mid T} \mu(\frac{T}{k})$$
 $$T = p_1 ^ {x_1} \times p_2 ^ {x_2} \times \cdots \times p_n ^ {x_n}$$
-$$T' = p_1 ^ {x_1 - 1} \times p_2 ^ {x_2} \times \cdots \times p_n ^ {x_n}$$
+$$T' = p_1 ^ {x_1 - 1} \times p_2 ^ {x_2} \times \cdots \times p_n ^ {x_n}$${% endraw %}
 考虑线性筛 $\mu$ 的过程，当 $T' \text{ mod } p_1 = 0$ 时
-$$f(T') = \sum_{i = 2} ^ k \mu(\frac {T'} {p_i})$$
+{% raw %}$$f(T') = \sum_{i = 2} ^ k \mu(\frac {T'} {p_i})$$
 $$\begin{aligned}f(T) &= \sum_{i = 1} ^ k \mu(\frac {T} {p_i}) \\
 &= \mu(\frac {T} {p_1}) + \sum_{i = 2} ^ k \mu(\frac {T} {p_i}) \\
 &= \mu(T') + \sum_{i = 2} ^ k \mu(\frac {T'} {p_i} \times p_1) \\
 &= \mu(T') + \sum_{i = 2} ^ k \mu(\frac {T'} {p_i}) \times \mu(p_1) 
-\end{aligned}$$
+\end{aligned}$${% endraw %}
 由于 $\mu(p_1) = -1$，那么
-$$f(T) = \mu(T') - f(T')$$
+{% raw %}$$f(T) = \mu(T') - f(T')$${% endraw %}
 
 当 $x_1 > 1$ 时，$\mu(p_1 ^ {x_1}) = 0$，则
-$$\begin{aligned}f(T) &= \sum_{i = 1} ^ k \mu(\frac {T} {p_i}) \\
+{% raw %}$$\begin{aligned}f(T) &= \sum_{i = 1} ^ k \mu(\frac {T} {p_i}) \\
 &= \mu(\frac {T} {p_1}) + \sum_{i = 2} ^ k \mu(\frac {T} {p_i}) \\
 &= \mu(T') + \sum_{i = 2} ^ k \mu(\frac {T} {p_i \times p_1 ^ {x_1}} \times p_1 ^ {x_1}) \\
 &= \mu(T') + \sum_{i = 2} ^ k \mu(\frac {T} {p_i \times p_1 ^ {x_1}}) \times \mu(p_1 ^ {x_1}) \\
 &= \mu(T')
-\end{aligned}$$
+\end{aligned}$${% endraw %}
 所以我们线筛预处理后分块回答询问即可。
 #### 代码
 ``` cpp
@@ -810,12 +809,12 @@ int main() {
 [BZOJ 3529](http://www.lydsy.com/JudgeOnline/problem.php?id=3529)
 #### 题解
 令 $\sigma(n)$ 表示 $n$ 的约数和，则第 $i$ 行第 $j$ 列的数为 $\sigma(\gcd(i, j))$，令 $f(k)$ 为 $\gcd(i, j) = k$ 的个数，我们考虑分开枚举每一个 $d = \gcd(i, j)$，它对答案的贡献为 $\sigma(d) \times f(d)$，由 `「BZOJ 1101」Zap` 的式子我们知道
-$$f(k) = \sum_{x = 1}^{\left\lfloor\frac n k\right\rfloor}\mu(x)\left\lfloor\frac n {kx}\right\rfloor\left\lfloor\frac m {kx}\right\rfloor$$
-与上题相同，我们令 $T = kx$，我们在外层枚举 $T$ 然后然后对每个质因子计算 $\mu$
-$$\sum_{T = 1} ^ n\lfloor \frac n T \rfloor \lfloor \frac m T \rfloor\sum_{k | T}\mu(\frac T k)$$
+{% raw %}$$f(k) = \sum_{x = 1}^{\left\lfloor\frac n k\right\rfloor}\mu(x)\left\lfloor\frac n {kx}\right\rfloor\left\lfloor\frac m {kx}\right\rfloor$${% endraw %}
+与上题相同，我们令 $T = kx$，我们在外层枚举 $T$ 则
+{% raw %}$$\sum_{T = 1} ^ n\lfloor \frac n T \rfloor \lfloor \frac m T \rfloor\sum_{k | T}\mu(\frac T k)$${% endraw %}
 故答案
-$$\begin{aligned}\sum_{i = 1, i \leq a} ^ n\sigma(i)f(i) &= \sum_{i = 1, i \leq a} ^ n\sigma(i)\sum_{T = 1} ^ n\lfloor \frac n T \rfloor \lfloor \frac m T \rfloor\sum_{i | T}\mu(\frac T i) \\
-&= \sum_{T = 1} ^ n\lfloor \frac n T \rfloor \lfloor \frac m T \rfloor \sum_{i | T, i \leq a}\sigma(i)\mu(\frac T i)\end{aligned}$$
+{% raw %}$$\begin{aligned}\sum_{i = 1, i \leq a} ^ n\sigma(i)f(i) &= \sum_{i = 1, i \leq a} ^ n\sigma(i)\sum_{T = 1} ^ n\lfloor \frac n T \rfloor \lfloor \frac m T \rfloor\sum_{i | T}\mu(\frac T i) \\
+&= \sum_{T = 1} ^ n\lfloor \frac n T \rfloor \lfloor \frac m T \rfloor \sum_{i | T, i \leq a}\sigma(i)\mu(\frac T i)\end{aligned}$${% endraw %}
 
 由于有 $a$ 的限制，我们不能直接线筛，我们可以把所有的询问按 $a$ 从小到大排序，然后把 $\sigma(x)$ 依次加进去，用树状数组维护前缀和，依次处理询问，时间复杂度为 $O(Q\sqrt{n}\log n + n \log ^ 2n)$。
 
@@ -970,12 +969,12 @@ int main() {
 [51 NOD 1244](http://www.51nod.com/onlineJudge/questionCode.html#!problemId=1244)
 #### 题解
 裸的杜教筛，根据上面所说的杜教筛的主要形式有
-$$g(1)S(n) = \sum_{i = 1} ^ n(f * g)(i) - \sum_{i = 2} ^ ng(i)S(\lfloor \frac n i \rfloor)$$
+{% raw %}$$g(1)S(n) = \sum_{i = 1} ^ n(f * g)(i) - \sum_{i = 2} ^ ng(i)S(\lfloor \frac n i \rfloor)$${% endraw %}
 所以我们只需要找到一个合适的数论函数 $g(n)$ 使得我们可以快速计算 $f * g$ 和 $\sum_{i = 2} ^ ng(i)$。  
 注意到
-$$\mu * 1 = \epsilon$$
+{% raw %}$$\mu * 1 = \epsilon$${% endraw %}
 我们令 $g$ 为常函数 $1$，那么
-$$S(n) = \sum_{i = 1} ^ n\epsilon(i) - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) = 1 - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor)$$
+{% raw %}$$S(n) = \sum_{i = 1} ^ n\epsilon(i) - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) = 1 - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor)$${% endraw %}
 #### 代码
 ``` cpp
 /**
@@ -1057,13 +1056,13 @@ int main() {
 [51 NOD 1239](http://www.51nod.com/onlineJudge/questionCode.html#!problemId=1239)
 #### 题解
 杜教筛，同上有
-$$g(1)S(n) = \sum_{i = 1} ^ n(f * g)(i) - \sum_{i = 2} ^ ng(i)S(\lfloor \frac n i \rfloor)$$
+{% raw %}$$g(1)S(n) = \sum_{i = 1} ^ n(f * g)(i) - \sum_{i = 2} ^ ng(i)S(\lfloor \frac n i \rfloor)$${% endraw %}
 由于
-$$\varphi = \mu * id, \epsilon = \mu * 1$$
+{% raw %}$$\varphi = \mu * id, \epsilon = \mu * 1$${% endraw %}
 故
-$$\varphi * 1 = \epsilon * id = id$$
+{% raw %}$$\varphi * 1 = \epsilon * id = id$${% endraw %}
 所以令 $g$ 为常函数 $1$，则
-$$S(n) = \sum_{i = 1} ^ nid(i) - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) = \frac {n \times (n + 1)} {2} - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor)$$
+{% raw %}$$S(n) = \sum_{i = 1} ^ nid(i) - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) = \frac {n \times (n + 1)} {2} - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor)$${% endraw %}
 #### 代码
 ``` cpp
 /**
@@ -1249,31 +1248,31 @@ int main() {
 [HDU 5608](http://acm.hdu.edu.cn/showproblem.php?pid=5608)
 #### 题解
 题意就是
-$$\sum_{d | n}f(d) = n ^ 2 - 3n + 2$$
+{% raw %}$$\sum_{d | n}f(d) = n ^ 2 - 3n + 2$${% endraw %}
 求
-$$\sum_{i = 1} ^ nf(i) \text{ mod }10 ^ 9 + 7$$
+{% raw %}$$\sum_{i = 1} ^ nf(i) \text{ mod }10 ^ 9 + 7$${% endraw %}
 
 这题显然是杜教筛，考虑通式
-$$g(1)S(n) = \sum_{i = 1} ^ n(f * g)(i) - \sum_{i = 2} ^ ng(i)S(\lfloor \frac n i \rfloor)$$
+{% raw %}$$g(1)S(n) = \sum_{i = 1} ^ n(f * g)(i) - \sum_{i = 2} ^ ng(i)S(\lfloor \frac n i \rfloor)$${% endraw %}
 由于
-$$f * 1 = \sum_{d | n}f(d) = n ^ 2 - 3n + 2$$
+{% raw %}$$f * 1 = \sum_{d | n}f(d) = n ^ 2 - 3n + 2$${% endraw %}
 令 $g$ 为常函数 $1$，则
-$$\begin{aligned}S(n) &= \sum_{i = 1} ^ n i ^ 2 - 3i + 2 - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) \\
+{% raw %}$$\begin{aligned}S(n) &= \sum_{i = 1} ^ n i ^ 2 - 3i + 2 - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) \\
 &= \sum_{i = 1} ^ n i ^ 2 - 3\sum_{i = 1} ^ ni + 2n - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) \\
 &= \frac {n * (n + 1) * (2n + 1)} {6} - \frac {3n * (n + 1)} {2} + 2n - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) \\
 &= \frac {n * (2n ^ 2 + 3n + 1 - 9n - 9 + 12)} {6} - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor) \\
 &= \frac {n * (n - 1) * (n - 2)} {3} - \sum_{i = 2} ^ nS(\lfloor \frac n i \rfloor)
-\end{aligned}$$
+\end{aligned}$${% endraw %}
 接下来我们只需要预处理前 $n ^ {\frac 2 3}$ 的 $S$ 就可以了，令
-$$h(n) = \sum_{d | n}f(d) = f * 1$$
+{% raw %}$$h(n) = \sum_{d | n}f(d) = f * 1$${% endraw %}
 由莫比乌斯反演，有
-$$f = \mu * h$$
+{% raw %}$$f = \mu * h$${% endraw %}
 故
-$$\begin{aligned}S(n) &= \sum_{i = 1} ^ nf(i) \\
+{% raw %}$$\begin{aligned}S(n) &= \sum_{i = 1} ^ nf(i) \\
 &= \sum_{i = 1} ^ n\sum_{d | i}h(i)\mu(\frac i d) \\
 &= \sum_{i = 1} ^ n\sum_{d | i}(i ^ 2 - 3i + 2)\mu(\frac i d) \\
 &= \sum_{i = 1} ^ n\sum_{d | i}(i - 1)(i - 2)\mu(\frac i d)
-\end{aligned}$$
+\end{aligned}$${% endraw %}
 然后我们就可以 $O(n \log n)$ 预处理前 $n ^ {\frac 2 3}$ 的 $S$ 了，故时间复杂度为 $O(\frac 2 3n ^ {\frac 2 3}\log n + Tn ^ {\frac 2 3})$
 #### 代码
 ``` cpp

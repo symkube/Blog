@@ -6,7 +6,7 @@ tags:
   - 图论
   - 2-SAT
 categories:
-  - oi
+  - OI
   - 图论
   - 2-SAT
 ---

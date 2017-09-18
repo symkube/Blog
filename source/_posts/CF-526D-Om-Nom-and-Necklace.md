@@ -5,7 +5,7 @@ tags:
   - 后缀数组
   - 字符串
 categories:
-  - oi
+  - OI
   - 字符串
   - 后缀数组
 ---
@@ -17,12 +17,12 @@ Help Om Nom determine in which ways he can cut off the first several beads from 
 ### 题解
 正解 KMP，~~但我不会(逃)~~
 于是用后缀数组啊，先跑出 KMP 的 $fail$ 指针，然后构建后缀数组，预处理数组 $g$，$dp$ 转移方程如下:
-$$
+{% raw %}$$
 g[sa[i]]=\left\{\begin{matrix}min(g[sa[i + 1]], height[i + 1])
  & i \in (0, rank[0] - 1] \cap \{i | height[i + 1] \neq  0\}  & \\ min(sa[i - 1], height[i])
  & i \in [rank[0] + 1, n) \cap \{i | height[i] \neq  0\}
 \end{matrix}\right.
-$$
+$${% endraw %}
 接下来只需要利用 $fail$ 指针暴力判断即可。
 由于使用了 $SA-IS$ 算法构造后缀数组，故时间复杂度为 $O(n)$
 ### 代码

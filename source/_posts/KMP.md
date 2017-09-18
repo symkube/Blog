@@ -6,7 +6,7 @@ tags:
   - 字符串
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 ## KMP算法学习总结

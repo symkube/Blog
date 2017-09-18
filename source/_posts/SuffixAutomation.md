@@ -6,7 +6,7 @@ tags:
   - 后缀自动机
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 ## 后缀自动机学习总结
@@ -38,7 +38,7 @@ A **suffix automaton** A for a string s is a minimal finite automaton that recog
 
 ### 状态
 #### 一些定义
-给定字符串 $T$ 与 $s$，定义 $endpos(T, s) = \left \{end | T \left [ begin : end \right ] = s \right \}$，即所有在 $T$ 中出现的 $s$ 的结束位置的下标，如果有两个字符串 $s_1$ 和 $s_2$，若 $endpos(T, s_1) = endpos(T, s_2)$，则 $s_1$ 和 $s_2$ 是 $endpos$ 等效的($endpos-equivalent$)。
+给定字符串 $T$ 与 $s$，定义 {% raw %}$endpos(T, s) = \left \{end | T \left [ begin : end \right ] = s \right \}${% endraw %}，即所有在 $T$ 中出现的 $s$ 的结束位置的下标，如果有两个字符串 $s_1$ 和 $s_2$，若 $endpos(T, s_1) = endpos(T, s_2)$，则 $s_1$ 和 $s_2$ 是 $endpos$ 等效的($endpos-equivalent$)。
 
 #### 子串
 对于 $T$ 的两个任意子串 $s_1$ 和 $s_2$，假设 $length(s_1) < length(s_2)$，如果 $endpos(s_1) \cap endpos(s_2) \neq \varnothing$，也就是说 $s_1$ 与 $s_2$ 至少会同时以 $T$ 某个字符作为结尾，即 $s_1$ 是 $s_2$ 的后缀。

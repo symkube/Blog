@@ -5,7 +5,7 @@ tags:
   - 字符串
   - AC自动机
 categories: 
-  - oi
+  - OI
   - 字符串
   - AC自动机
 ---

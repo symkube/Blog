@@ -5,8 +5,9 @@ tags:
   - 组合数学
   - 生成函数
 categories:
-  - oi
+  - OI
   - 组合数学
+  - 生成函数
 ---
 ### 链接
 [POJ 3734](http://poj.org/problem?id=3734)
@@ -16,19 +17,19 @@ categories:
 
 ### 题解
 构造指数型生成函数
-$$Y(x) = B(x) = \sum_{i = 0} ^ {\infty} \frac {x ^ i} {i!}$$
-$$R(x) = G(x) = \sum_{i = 0} ^ {\infty} \frac {x ^ {2i}} {(2i)!}$$
+{% raw %}$$Y(x) = B(x) = \sum_{i = 0} ^ {\infty} \frac {x ^ i} {i!}$${% endraw %}
+{% raw %}$$R(x) = G(x) = \sum_{i = 0} ^ {\infty} \frac {x ^ {2i}} {(2i)!}$${% endraw %}
 根据泰勒展开有
-$$e ^ x = \sum_{i = 0} ^ {\infty} \frac {x ^ i} {i!}$$
-$$e ^ {-x} = \sum_{i = 0} ^ {\infty} \frac {(-x) ^ i} {i!}$$
+{% raw %}$$e ^ x = \sum_{i = 0} ^ {\infty} \frac {x ^ i} {i!}$$
+$$e ^ {-x} = \sum_{i = 0} ^ {\infty} \frac {(-x) ^ i} {i!}$${% endraw %}
 故
-$$R(x) = G(x) = \frac {e ^ x + e ^ {-x}} {2}$$
+{% raw %}$$R(x) = G(x) = \frac {e ^ x + e ^ {-x}} {2}$${% endraw %}
 答案为
-$$\begin{aligned}Y(x)B(x)R(x)G(x) &= (e ^ x) ^ 2(\frac {e ^ x + e ^ {-x}} {2}) ^ 2 \\
+{% raw %}$$\begin{aligned}Y(x)B(x)R(x)G(x) &= (e ^ x) ^ 2(\frac {e ^ x + e ^ {-x}} {2}) ^ 2 \\
 &= \frac {e ^ {4x} + 2e ^ {2x} + 1} {4} \\
 &= \sum_{i = 0} ^ {\infty} \frac {4 ^ i + 2 * 2 ^ i} {4} \frac {x ^ i} {i!} \\
 &= 4 ^ {n - 1} + 2 ^ {n - 1}
-\end{aligned}$$
+\end{aligned}$${% endraw %}
 
 ### 代码
 ``` cpp

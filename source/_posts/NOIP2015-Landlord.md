@@ -2,11 +2,9 @@
 title: '「NOIP 2015」斗地主-状压搜索'
 date: 2016-11-03 22:50:23
 tags:
-  - oi
-  - c++
   - 搜索
 categories: 
-  - oi
+  - OI
   - 搜索
 ---
 ### 链接

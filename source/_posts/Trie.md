@@ -2,12 +2,11 @@
 title: Trie 学习笔记
 date: 2016-06-26 12:09:35
 tags:
-  - oi
   - 学习笔记
   - 字符串
   - Trie
 catrgories: 
-  - oi
+  - OI
   - 学习笔记
 ---
 ## Trie 树(c++实现)

@@ -5,8 +5,9 @@ tags:
   - KMP
   - 字符串
 categories:
-  - oi
+  - OI
   - 字符串
+  - KMP
 ---
 Given two strings a and b we define a*b to be their concatenation. For example, if a = "abc" and b = "def" then a*b = "abcdef". If we think of concatenation as multiplication, exponentiation by a non-negative integer is defined in the normal way: a^0 = "" (the empty string) and a^(n+1) = a*(a^n).
 <!-- more -->

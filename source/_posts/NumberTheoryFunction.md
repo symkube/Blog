@@ -5,7 +5,7 @@ tags:
   - 数论
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 > **数论函数**：定义域为正整数的函数。
@@ -29,12 +29,12 @@ categories:
 #### 定义
 > 欧拉函数 $\varphi (n)$: $\varphi (n)$ 表示 $\left [1, n \right ]$ 中与 $n$ 互质的整数的个数。
 
-> 通式: $\varphi (x) = \sum_{i = 1}^{n} \left [ gcd(i, n) == 1 \right ] = x \prod_{i = 1}^n \left ( 1 - \frac{1} {p_i} \right )$，其中 $p_i$ 为 $x$ 的所有质因数，$x$ 为不是 $0$ 的整数。
+> 通式: {% raw %}$\varphi (x) = \sum_{i = 1}^{n} \left [ gcd(i, n) == 1 \right ] = x \prod_{i = 1}^n \left ( 1 - \frac{1} {p_i} \right )${% endraw %}，其中 $p_i$ 为 $x$ 的所有质因数，$x$ 为不是 $0$ 的整数。
 
 #### 一些性质
 > $\varphi (1) = 1$。
 
-> 若 $n$ 是质数 $p$ 的 $k$ 次幂，则 $\varphi (n) = p^k - p^{k - 1} = (p - 1)p^{k - 1}$
+> 若 $n$ 是质数 $p$ 的 $k$ 次幂，则 {% raw %}$\varphi (n) = p^k - p^{k - 1} = (p - 1)p^{k - 1}${% endraw %}
 
 **证明：**
 考虑容斥，全集为 $p^k$，由于除了 $p$ 的倍数外，其他数都跟 $n$ 互质，故应减去 $p^k / p = p^{k - 1}$个数。
@@ -44,7 +44,7 @@ categories:
 **证明：**
 带入通式化简即可得到若 $m, n$ 互质，$\varphi (mn) = \varphi(m) \varphi(n)$
 
-> 当 $n > 1$ 时，$\sum_{i = 1}^{n} i \cdot \left [ gcd(i, n) == 1 \right ] = \frac{n \cdot \varphi(n)} {2}$
+> 当 $n > 1$ 时，{% raw %}$\sum_{i = 1}^{n} i \cdot \left [ gcd(i, n) == 1 \right ] = \frac{n \cdot \varphi(n)} {2}${% endraw %}
 
 **证明：**
 若 $x$ 满足 $gcd(x, n) == 1$，则 $gcd(n - x, n) == 1$，故只需除以 $2$ 即可。
@@ -52,19 +52,19 @@ categories:
 ### 莫比乌斯函数
 #### 定义
 莫比乌斯函数 $\mu (n)$：
-$$
+{% raw %}$$
 \mu(n) =
 \left\{\begin{matrix}
 1 & n = 1 \\
 (-1)^k & n = p_1p_2 \cdots p_k \\
 0 & else
 \end{matrix}\right.
-$$
+$${% endraw %}
 $p_i$ 为不同的质数。
 
 ### 除数函数
 #### 定义
-除数函数 $\sigma(n)$ 表示 $n$ 的所有正因子之和，即 $\sigma(n) = \sum_{d | n \text{ and } d > 0} d$
+除数函数 $\sigma(n)$ 表示 $n$ 的所有正因子之和，即 {% raw %}$\sigma(n) = \sum_{d | n \text{ and } d > 0} d${% endraw %}
 
 $d(n)$ 表示 $n$ 的正因子个数，即 $d(n) = \sum_{d | n}1$。
 
@@ -74,7 +74,7 @@ $d(n)$ 表示 $n$ 的正因子个数，即 $d(n) = \sum_{d | n}1$。
 
 ### 单位函数
 #### 定义
-单位函数 $\epsilon (n) = \left [ n == 1 \right ]$。
+单位函数 {% raw %}$\epsilon (n) = \left [ n == 1 \right ]${% endraw %}。
 
 ### 常函数
 #### 定义
@@ -83,30 +83,30 @@ $d(n)$ 表示 $n$ 的正因子个数，即 $d(n) = \sum_{d | n}1$。
 ## 狄利克雷（Dirichlet）卷积
 ### 定义
 定义两个数论函数 $f$, $g$ 的 $Dirichlet$ 卷积：
-$(f * g)(n) = \sum_{d | n} f(d) g(\frac{n} {d})$。
+{% raw %}$(f * g)(n) = \sum_{d | n} f(d) g(\frac{n} {d})${% endraw %}。
 ### 一些性质
-1. 交换律：$f * g = g * f$
-2. 结合律：$f * g * h = f * (g * h)$
-3. 分配率：$f * (g + h) = f * g + f * h$
-4. 单位元：$f * \epsilon = \epsilon * f$
+1. 交换律：{% raw %}$f * g = g * f${% endraw %}
+2. 结合律：{% raw %}$f * g * h = f * (g * h)${% endraw %}
+3. 分配率：{% raw %}$f * (g + h) = f * g + f * h${% endraw %}
+4. 单位元：{% raw %}$f * \epsilon = \epsilon * f${% endraw %}
 
 **重要性质**：若 $f, g$ 均为积性函数，则 $f * g$ 也是积性函数。（展开式子即可证明）
 
 ### 常见卷积
-1. $d(n) = \sum_{d | n}1 = \sum_{d | n}1(d)1( \frac{n} {d} ) = 1 * 1$
-2. $\sigma (n) = \sum_{d | n}d = \sum_{d | n}d(d)1( \frac{n} {d} ) = d * 1$
-3. $\varphi (n) = \sum_{d | n} \mu (d) \frac{n} {d} = \sum_{d | n} \mu (d)id( \frac{n} {d}) = \mu * id$
-4. $\epsilon (n) = \sum_{d | n} \mu (d) = \sum_{d | n} \mu (d)1( \frac{n} {d}) = \mu * 1$
+1. {% raw %}$d(n) = \sum_{d | n}1 = \sum_{d | n}1(d)1( \frac{n} {d} ) = 1 * 1${% endraw %}
+2. {% raw %}$\sigma (n) = \sum_{d | n}d = \sum_{d | n}d(d)1( \frac{n} {d} ) = d * 1${% endraw %}
+3. {% raw %}$\varphi (n) = \sum_{d | n} \mu (d) \frac{n} {d} = \sum_{d | n} \mu (d)id( \frac{n} {d}) = \mu * id${% endraw %}
+4. {% raw %}$\epsilon (n) = \sum_{d | n} \mu (d) = \sum_{d | n} \mu (d)1( \frac{n} {d}) = \mu * 1${% endraw %}
 
 **一些变换**：
-1. 由于 $\varphi = \mu * id$，$\epsilon = \mu * 1$，所以 $1 * \varphi = 1 * \mu * id$，所以 $1 * varphi = \epsilon * id = id$，即 $\sum_{d | n} \varphi (d) = n$。
-2. 由于 $\epsilon  = \mu * 1$，$\sum_{d | n} \mu (d) = \left [ n == 1 \right ]$
+1. 由于 {% raw %}$\varphi = \mu * id$，$\epsilon = \mu * 1${% endraw %}，所以 {% raw %}$1 * \varphi = 1 * \mu * id${% endraw %}，所以 {% raw %}$1 * varphi = \epsilon * id = id${% endraw %}，即 {% raw %}$\sum_{d | n} \varphi (d) = n${% endraw %}。
+2. 由于 {% raw %}$\epsilon  = \mu * 1${% endraw %}，{% raw %}$\sum_{d | n} \mu (d) = \left [ n == 1 \right ]${% endraw %}
 
 **证明**：
 设 $n$ 有 $k (k > 0)$ 个不同的质因子，则 $n$ 所有的质因子中 $\mu != 0$ 的只有所有质因子次数都为 $1$ 的因子，质因子个数为 $1$ 的因子有 $\binom{k}{i}$ 个，再利用二项式定理可以得到
 
-$\sum_{d | n} \mu (d) = \sum_{i = 0}^{k}(-1)^i \cdot \binom{k}{i} = (1 - 1)^k = 0$
-当 $n = 1$ 时原式为 $1$，因此 $\sum_{d | n} \mu (d) = \left [ n == 1 \right ]$
+{% raw %}$\sum_{d | n} \mu (d) = \sum_{i = 0}^{k}(-1)^i \cdot \binom{k}{i} = (1 - 1)^k = 0${% endraw %}
+当 $n = 1$ 时原式为 $1$，因此 {% raw %}$\sum_{d | n} \mu (d) = \left [ n == 1 \right ]${% endraw %}
 
 ### 预处理
 若已知数论函数 $f, g$ ，可以用 $O(n \log n)$ 的时间预处理出 $f * g$。
@@ -126,14 +126,14 @@ inline void calculateDirichletProduct(int n) {
 ```
 ### 莫比乌斯反演
 若有两个函数 $f,g$ 满足：
-$f(n) = \sum_{d | n}g(d)$，即 $f = g * 1$
+{% raw %}$f(n) = \sum_{d | n}g(d)$，即 $f = g * 1${% endraw %}
 则他们也满足：
-$g(n) = \sum_{d | n}\mu (d)f( \frac{n} {d})$，即 $g = \mu * f$
+{% raw %}$g(n) = \sum_{d | n}\mu (d)f( \frac{n} {d})$，即 $g = \mu * f${% endraw %}
 
 #### 证明
-若 $f = g * 1$， 则 $f * \mu = g (*1 * \mu) = g * \epsilon = g$
+若 $f = g * 1$， 则 {% raw %}$f * \mu = g (*1 * \mu) = g * \epsilon = g${% endraw %}
 
-若 $g = \mu * f$，则 $g * 1 = \mu * f * 1 = \mu * 1 * f = \epsilon * f = f$
+若 $g = \mu * f$，则 {% raw %}$g * 1 = \mu * f * 1 = \mu * 1 * f = \epsilon * f = f${% endraw %}
 
 ### 快速线性筛选法
 ``` cpp

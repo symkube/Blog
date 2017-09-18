@@ -5,7 +5,7 @@ tags:
   - 数学
   - 扩展欧几里德
 categories:
-  - oi
+  - OI
   - 数学
 ---
 A Compiler Mystery: We are given a C-language style for loop of type

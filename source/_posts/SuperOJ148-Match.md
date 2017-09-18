@@ -6,7 +6,7 @@ tags:
   - 栈
   - 数据结构
 categories:
-  - oi
+  - OI
   - 数据结构
   - 栈
 ---

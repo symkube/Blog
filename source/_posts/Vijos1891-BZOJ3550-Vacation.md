@@ -6,7 +6,7 @@ tags:
   - 费用流
   - 单纯形
 categories:
-  - oi
+  - OI
   - 线性规划
 ---
 给出一个长度为 $3n$ 的序列，规定连续 $n$ 个数字中不能选择超过 $k$ 个，问最多能取出的数的权值和是多少。
@@ -23,25 +23,25 @@ categories:
 
 设每个数的权值为 $a_i$，$x_i$ 表示是否选这个数。  
 最大化：
-$$\sum_{i = 1} ^ {3n} a_ix_i$$
+{% raw %}$$\sum_{i = 1} ^ {3n} a_ix_i$${% endraw %}
 
 满足：
-$$x_i \leq 1$$
-$$\sum_{i} ^ {i + n - 1}a_i \leq k,\ \  i + n - 1 \leq 3n$$
+{% raw %}$$x_i \leq 1$${% endraw %}
+{% raw %}$$\sum_{i} ^ {i + n - 1}a_i \leq k,\ \  i + n - 1 \leq 3n$${% endraw %}
 
 然后直接跑单纯形就完了。
 
 #### 费用流
 令 $n = 3N, m = n$，还是先列出对应的限制条件：
-$$\begin{cases}0\le x_i\le1\\x_1+x_2+ \cdots +x_m\le k\\x_2+x_3+ \cdots +x_{m+1}\le k\\ \cdots \\x_{n-m+1}+x_{n-m+2}+ \cdots +x_n\le k\end{cases}$$
+{% raw %}$$\begin{cases}0\le x_i\le1\\x_1+x_2+ \cdots +x_m\le k\\x_2+x_3+ \cdots +x_{m+1}\le k\\ \cdots \\x_{n-m+1}+x_{n-m+2}+ \cdots +x_n\le k\end{cases}$${% endraw %}
 
 添加变量 $y_i$ 转化为相等关系：
 
-$$\begin{cases}0\le x_i\le1\\y_i\ge0\\x_1+x_2+ \cdots +x_m+y_1= k\\x_2+x_3+ \cdots +x_{m+1}+y_2= k\\ \cdots \\x_{n-m+1}+x_{n-m+2}+ \cdots +x_n+y_{n-m+1}= k\end{cases}$$
+{% raw %}$$\begin{cases}0\le x_i\le1\\y_i\ge0\\x_1+x_2+ \cdots +x_m+y_1= k\\x_2+x_3+ \cdots +x_{m+1}+y_2= k\\ \cdots \\x_{n-m+1}+x_{n-m+2}+ \cdots +x_n+y_{n-m+1}= k\end{cases}$${% endraw %}
 
 上下差分可得：
 
-$$\begin{cases}x_1+x_2+ \cdots +x_m+y_1-k=0\\x_{m+1}-x_1+y_2-y_1=0\\x_{m+2}-x_2+y_3-y_2=0\\ \cdots \\x_{n-1}-x_{n-m-1}+y_{n-m}-y_{n-m-1}=0\\x_n-x_{n-m}+y_{n-m+1}-y_{n-m}=0\\-x_{n-m+1}-x_{n-m+2}- \cdots -x_n-y_{n-m+1}+k=0\end{cases}$$
+{% raw %}$$\begin{cases}x_1+x_2+ \cdots +x_m+y_1-k=0\\x_{m+1}-x_1+y_2-y_1=0\\x_{m+2}-x_2+y_3-y_2=0\\ \cdots \\x_{n-1}-x_{n-m-1}+y_{n-m}-y_{n-m-1}=0\\x_n-x_{n-m}+y_{n-m+1}-y_{n-m}=0\\-x_{n-m+1}-x_{n-m+2}- \cdots -x_n-y_{n-m+1}+k=0\end{cases}$${% endraw %}
 
 将这 $n - m + 2$ 个限制看成点，$S \rightarrow 1$，容量为 $k$，费用为 $0$，$n - m + 2 \rightarrow T$，容量为 $k$，费用为 $0$，$i \rightarrow i + 1$，容量为 $\infty$，费用为 $0$，对于每个变量 $x_i$，系数为 $+1$ 的位置向系数为 $-1$ 的位置连边，容量为 $1$，费用为 $-c_i$，然后跑最小费用最大流取费用的相反数即为答案。
 

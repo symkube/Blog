@@ -5,7 +5,7 @@ tags:
   - A*
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 ## A\*算法学习总结

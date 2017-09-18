@@ -5,7 +5,7 @@ tags:
   - 网络流
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 

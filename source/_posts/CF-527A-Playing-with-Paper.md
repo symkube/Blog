@@ -2,12 +2,10 @@
 title: 「CF-527A」Playing with Paper-模拟
 date: 2017-01-03 16:54:08
 tags:
-  - oi
-  - c++
   - 数论
   - 模拟
 categories:
-  - oi
+  - OI
   - 数论
 ---
 One day Vasya was sitting on a not so interesting Maths lesson and making an origami from a rectangular a mm  ×  b mm sheet of paper (a > b). Usually the first step in making an origami is making a square piece of paper from the rectangular sheet by folding the sheet along the bisector of the right angle, and cutting the excess part.

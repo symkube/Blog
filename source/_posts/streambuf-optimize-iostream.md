@@ -6,7 +6,7 @@ tags:
   - IO
   - 黑科技
 categories:
-  - oi
+  - OI
   - IO
 ---
 使用 streambuf 使 cin / cout 效率高于 fread / fwrite。  

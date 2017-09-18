@@ -4,7 +4,7 @@ date: 2016-05-24 12:38:23
 tags:
   - 排序
 categories:
-  - oi
+  - OI
   - 排序
 ---
 ## 第 k 小整数

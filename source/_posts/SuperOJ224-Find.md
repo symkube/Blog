@@ -4,7 +4,7 @@ date: 2016-07-27 21:03:24
 tags:
   - 模拟
 categories: 
-  - oi
+  - OI
   - 模拟
 ---
 ## 查找

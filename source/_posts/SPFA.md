@@ -5,7 +5,7 @@ tags:
   - 最短路
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 ## SPFA

@@ -5,9 +5,8 @@ tags:
   - 平衡树
   - 数据结构
   - 学习笔记
-  - Splay
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 Splay Tree（伸展树）是一种自平衡二叉排序树，可以在均摊 $O({\log} n)$ 的时间内完成基于 Splay（伸展）操作的修改与查询。

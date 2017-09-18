@@ -5,7 +5,7 @@ tags:
   - 平衡树
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 $AA$ 树是 $Arne Andersson$ 教授在他的论文 $"Balanced search trees made simple"$ 中介绍的一个红黑树变种，设计的目的是减少 $RB$ 树考虑的 $cases$。

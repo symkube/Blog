@@ -4,7 +4,7 @@ date: 2016-07-27 20:42:52
 tags:
   - DP
 categories: 
-  - oi
+  - OI
   - DP
 ---
 ## 老旧的机器

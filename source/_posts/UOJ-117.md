@@ -5,7 +5,7 @@ tags:
   - 图论
   - 欧拉回路
 categories:
-  - oi
+  - OI
   - 图论
   - 欧拉回路
 ---

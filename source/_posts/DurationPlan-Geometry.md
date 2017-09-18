@@ -5,7 +5,7 @@ tags:
   - 补档计划
   - 计算几何
 categories:
-  - oi
+  - OI
   - 补档计划
 ---
 一些常见的计算几何。
@@ -221,7 +221,7 @@ $\vec{AB} \times \vec{CD} = 0$ 则两直线平行。
 在平行的基础上，任意交换一个端点，叉积仍为 $0$ 则两直线共线。
 ##### 求交点
 ![求交点](/images/计算几何1.svg)
-设交点为 $P$，则 $P = A + \vec{AB} \cdot \frac {S_{ACD}} {S_{ACBD}}$，
+设交点为 $P$，则 {% raw %}$P = A + \vec{AB} \cdot \frac {S_{ACD}} {S_{ACBD}}${% endraw %}，
 ``` cpp
 struct Line {
     Point s, t;
@@ -895,8 +895,7 @@ int main() {
 就是判断线段与线段是否相交的问题。
 ##### 判断线段与线段相交
 首先是快速跨立实验，
-$$max(A.x, B.x) \geq min(C.x, D.x)$$ $$max(A.y, B.y) \geq min(C.y, D.y)$$ $$max(C.y, D.y) \geq min(A.y, B.y)$$ 
-$$max(C.y, D.y) \geq min(A.y, B.y)$$，
+$$max(A.x, B.x) \geq min(C.x, D.x)$$ $$max(A.y, B.y) \geq min(C.y, D.y)$$ $$max(C.y, D.y) \geq min(A.y, B.y)$$ $$max(C.y, D.y) \geq min(A.y, B.y)$$，
 然后再判断
 $$(\vec{AB} \times \vec{AC}) \times (\vec{AB} \times \vec{AD}) \leq 0 \&\& (\vec{CD} \times \vec{CB}) \times (\vec{CD} \times \vec{CA}) \leq 0$$
 #### 代码

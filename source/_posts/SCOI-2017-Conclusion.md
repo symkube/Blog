@@ -2,10 +2,8 @@
 title: SCOI 2017 总结
 date: 2017-04-09 22:36:38
 tags:
-  - 日常
 categories:
-  - oi
-  - 日常
+  - OI
 ---
 ## SCOI 2017 总结
 SCOI 2017 结束了，完挂....

@@ -2,11 +2,10 @@
 title: "「NOI2004」郁闷的出纳员 - Splay"
 date: 2016-12-19 13:51:27
 tags:
-  - Splay
   - 数据结构
   - 平衡树
 categories:
-  - oi
+  - OI
   - 数据结构
   - 平衡树
 ---

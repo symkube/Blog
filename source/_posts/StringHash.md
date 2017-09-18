@@ -6,7 +6,7 @@ tags:
   - Hash
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 ## 字符串Hash学习总结

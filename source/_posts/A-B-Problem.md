@@ -3,8 +3,7 @@ title: A+B Problem
 date: 2016-05-24 11:54:38
 tags:
 categories:
-  - oi
-  - 入门
+  - OI
 ---
 ## A+B Problem
 ### 题目背景
@@ -49,4 +48,5 @@ public class Main {
     }
 }
 ```
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=766217&auto=1&height=66"></iframe>

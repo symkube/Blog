@@ -6,7 +6,7 @@ tags:
   - LCT
   - 学习笔记
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 ## Link-Cut Tree学习总结

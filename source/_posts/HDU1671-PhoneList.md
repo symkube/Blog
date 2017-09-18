@@ -5,7 +5,7 @@ tags:
   - 字符串
   - Trie
 categories:
-  - oi
+  - OI
   - 字符串
   - Trie
 ---

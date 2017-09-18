@@ -6,9 +6,9 @@ tags:
   - Tarjan
   - 2-SAT
 categories:
-  - oi
+  - OI
   - 图论
-  - Tarjan
+  - 2-SAT
 ---
 Up to thirty couples will attend a wedding feast, at which they will be seated on either side of a long table. The bride and groom sit at one end, opposite each other, and the bride wears an elaborate headdress that keeps her from seeing people on the same side as her. It is considered bad luck to have a husband and wife seated on the same side of the table. Additionally, there are several pairs of people conducting adulterous relationships (both different-sex and same-sex relationships are possible), and it is bad luck for the bride to see both members of such a pair. Your job is to arrange people at the table so as to avoid any bad luck.
 <!-- more -->

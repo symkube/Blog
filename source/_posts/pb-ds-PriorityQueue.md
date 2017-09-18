@@ -6,7 +6,7 @@ tags:
   - 堆
   - 黑科技
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 ### pb_ds库

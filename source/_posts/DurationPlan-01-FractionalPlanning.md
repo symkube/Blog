@@ -5,7 +5,7 @@ tags:
   - 补档计划
   - 分数规划
 categories:
-  - oi
+  - OI
   - 补档计划
 ---
 写二分被卡 T 了，赶紧来补一补 01-分数规划的 Dinkelbach 算法...

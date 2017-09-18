@@ -5,7 +5,7 @@ tags:
   - 数学
   - 欧拉函数
 categories:
-  - oi
+  - OI
   - 数学
 ---
 Exponentiation of one integer by another often produces very large results. In this problem, we will compute a function based on repeated exponentiation, but output only the last n digits of the result. Doing this efficiently requires careful thought about how to avoid computing the full answer.

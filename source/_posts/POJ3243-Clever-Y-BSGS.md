@@ -5,7 +5,7 @@ tags:
   - 数学
   - BSGS
 categories:
-  - oi
+  - OI
   - 数学
 ---
 Little Y finds there is a very interesting formula in mathematics:

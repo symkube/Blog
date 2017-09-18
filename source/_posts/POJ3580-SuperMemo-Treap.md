@@ -5,8 +5,9 @@ tags:
   - 平衡树
   - 数据结构
 categories:
-  - oi
+  - OI
   - 数据结构
+  - 平衡树
 ---
 Your friend, Jackson is invited to a TV show called SuperMemo in which the participant is told to play a memorizing game. At first, the host tells the participant a sequence of numbers, {A1, A2, ... An}. Then the host performs a series of operations and queries on the sequence which consists:
 <!-- more -->

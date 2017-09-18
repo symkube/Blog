@@ -3,8 +3,10 @@ title: 「POJ-1741」tree-点分治
 date: 2016-12-20 10:25:57
 tags:
   - 点分治
+  - 数据结构
 categories:
-  - oi
+  - OI
+  - 数据结构
   - 点分治
 ---
 Give a tree with n vertices,each edge has a length(positive integer less than 1001). 

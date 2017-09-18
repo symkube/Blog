@@ -4,7 +4,7 @@ date: 2016-07-27 21:07:20
 tags:
   - DP
 categories: 
-  - oi
+  - OI
   - DP
 ---
 ## 计算数字

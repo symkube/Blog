@@ -7,7 +7,7 @@ tags:
   - 欧拉函数
   - 线筛
 categories:
-  - oi
+  - OI
   - 数学
 ---
 We say that integer x, 0 < x < p, is a primitive root modulo odd prime p if and only if the set { (xi mod p) | 1 <= i <= p-1 } is equal to { 1, ..., p-1 }. For example, the consecutive powers of 3 modulo 7 are 3, 2, 6, 4, 5, 1, and thus 3 is a primitive root modulo 7.

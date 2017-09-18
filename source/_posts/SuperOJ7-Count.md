@@ -4,7 +4,7 @@ date: 2016-05-24 15:23:06
 tags:
   - 排序
 categories:
-  - oi
+  - OI
   - 排序
 ---
 ## 众数

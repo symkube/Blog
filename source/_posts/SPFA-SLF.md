@@ -5,7 +5,7 @@ tags:
   - 图论
   - 最短路
 categories:
-  - oi
+  - OI
   - 图论
   - 最短路
 ---

@@ -6,7 +6,7 @@ tags:
   - 补档计划
   - 后缀数组
 categories:
-  - oi
+  - OI
   - 补档计划
 ---
 后缀数组的一些应用和题目，这里所有的时间复杂度均针对 [SA-IS](https://blog.xehoth.cc/2016/12/26/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84%E5%8F%8ASA-IS%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/) 算法。
@@ -452,9 +452,9 @@ int main() {
 [BZOJ3238](http://www.lydsy.com/JudgeOnline/problem.php?id=3238)
 #### 题解
 因为每个后缀均被枚举了 $n - 1$ 次，所以
-$$\sum_{1 \leq i < j \leq n}len(T_i) + len(T_j) = (n - 1) \times \frac {n(n + 1)} {2}$$
-而两个后缀的 $lcp(T_i, T_j)$ 的长度应为 $min \text{ } height[k], k \in [rank[i] + 1, rank[j]]$，则：
-$$\sum_{1 \leq i < j \leq n}len(lcp(T_i, T_j)) = \sum_{1 \leq i < j \leq n}min \text{ } height[k], k \in [i + 1, j]$$
+{% raw %}$$\sum_{1 \leq i{% endraw %} < {% raw %}j \leq n}len(T_i) + len(T_j) = (n - 1) \times \frac {n(n + 1)} {2}$${% endraw %}
+而两个后缀的 {% raw %}$lcp(T_i, T_j)${% endraw %} 的长度应为 {% raw %}$min \text{ } height[k], k \in [rank[i] + 1, rank[j]]${% endraw %}，则：
+{% raw %}$$\sum_{1 \leq i{% endraw %} < {% raw %}j \leq n}len(lcp(T_i, T_j)) = \sum_{1 \leq i{% endraw %} < {% raw %}j \leq n}min \text{ } height[k], k \in [i + 1, j]$${% endraw %}
 
 即所有区间的 $height$ 的最小值之和，我们可以枚举区间的结尾 $i$，在这之前比 $height[i]$ 大的值都不不会对答案产生影响，考虑使用单调栈维护，当考虑到 $i$ 对答案的贡献时，记在 $i$ 之前第一个满足 $height[j] < height[i]$ 的 $j$，区间开头在 $[j + 1, i]$ 内的区间最小值均为 $height[i]$，即对答案的贡献为 $(i - j) \times height[i]$，从头枚举一遍即可。
 
@@ -1314,7 +1314,7 @@ int main() {
 #### 题解
 此题就是求字符串的最小循环表示，也可以用最小表示法，后缀自动机做。
 
-由于此题的数据有 $0$，我们对于每个树先全部加上 $1$，把原串 $S$ 复制一遍变为 $SS$，我们再往后面加一个最大字符，然后构建后缀数组，找到 $sa[1]$ 所对应原串中的位置输出就可以了，即输出 $SS_{sa[1] \% n} \text{ ~ } SS_{sa[1] \% n + n - 1}$。
+由于此题的数据有 $0$，我们对于每个树先全部加上 $1$，把原串 $S$ 复制一遍变为 $SS$，我们再往后面加一个最大字符，然后构建后缀数组，找到 $sa[1]$ 所对应原串中的位置输出就可以了，即输出 {% raw %}$SS_{sa[1] \% n} \text{ ~ } SS_{sa[1] \% n + n - 1}${% endraw %}。
 #### 代码
 ``` cpp
 /*******************************************************************************

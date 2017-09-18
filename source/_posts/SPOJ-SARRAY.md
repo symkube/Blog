@@ -5,7 +5,7 @@ tags:
   - 字符串
   - 后缀数组
 categories:
-  - oi
+  - OI
   - 字符串
   - 后缀数组
 ---

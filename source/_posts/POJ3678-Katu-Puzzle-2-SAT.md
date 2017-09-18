@@ -6,9 +6,9 @@ tags:
   - Tarjan
   - 2-SAT
 categories:
-  - oi
+  - OI
   - 图论
-  - Tarjan
+  - 2-SAT
 ---
 Katu Puzzle is presented as a directed graph G(V, E) with each edge e(a, b) labeled by a boolean operator op (one of AND, OR, XOR) and an integer c (0  \leq  c  \leq  1). One Katu is solvable if one can find each vertex Vi a value Xi (0  \leq  Xi  \leq  1) such that for each edge e(a, b) labeled by op and c, the following formula holds:...
 <!-- more -->

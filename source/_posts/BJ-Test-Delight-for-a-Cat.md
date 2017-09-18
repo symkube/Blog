@@ -6,8 +6,10 @@ tags:
   - 网络流
   - 费用流
 categories:
-  - oi
+  - OI
   - 图论
+  - 网络流
+  - 费用流
 ---
 从前，有一只懒猫叫 $CJB$。每个小时，这只猫要么在睡觉，要么在吃东西，但不能一边睡觉一边吃东西，并且这只猫会在一整个小时干同一件事情。
 
@@ -28,43 +30,63 @@ categories:
 
 则有下列不等式：
 <center>
-
+{% raw %}
 $m_e \leq x_1 + x_2 + x_3 + \cdots + x_k \leq k - m_s$
+{% endraw %}
 <br>
+{% raw %}
 $m_e \leq x_2 + x_3 + x_4 + \cdots + x_{k + 1} \leq k - m_s$
+{% endraw %}
 <br>
 $\cdots$
 <br>
+{% raw %}
 $m_e \leq x_{n - k + 1} + x_{n - k + 2} + \cdots + x_n \leq k - m_s$
-
+{% endraw %}
 </center>
 
-我们令 $0 \leq y_1 \leq k - m_s - m_e$，则上述不等式可以转化为以下的等式：
+我们令 {% raw %}$0 \leq y_1 \leq k - m_s - m_e${% endraw %}，则上述不等式可以转化为以下的等式：
 
 <center>
+{% raw %}
 $x_1 + x_2 + x_3 + \cdots + x_k + y_1 = k - m_s$
+{% endraw %}
 <br>
+{% raw %}
 $x_2 + x_3 + x_4 + \cdots + x_{k + 1} + y_2 = k - m_s$
+{% endraw %}
 <br>
 $\cdots$
 <br>
+{% raw %}
 $x_{n - k + 1} + x_{n - k + 2} + \cdots + x_n + y_{n - k + 1} = k - m_s$
+{% endraw %}
 </center>
 
 将这些等式两两相减，得：
 
 <center>
+{% raw %}
 $x_1 - x_{k + 1} + y_1 - y_2 = 0$
+{% endraw %}
 <br>
+{% raw %}
 $x_2 - x_{k + 2} + y_2 - y_3 = 0$
+{% endraw %}
 <br>
-$...$
+$\cdots$
 <br>
+{% raw %}
 $x_{n - k} - x_n + y_{n - k} - y_{n - k + 1} = 0$
+{% endraw %}
 <br>
+{% raw %}
 $(k - m_s) - x_1 - x_2 - \cdots - x_k - y_1 = 0$
+{% endraw %}
 <br>
+{% raw %}
 $x_{n - k + 1} + x_{n - k + 2} + \cdots + x_n + y_{n - k + 1} - (k - m_s) = 0$
+{% endraw %}
 </center>
 
 我们把等式左边加起来，发现恰好为 $0$，满足流量平衡。

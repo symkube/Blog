@@ -2,9 +2,8 @@
 title: 「SuperOJ 2」军事机密
 date: 2016-05-24 12:29:15
 tags:
-  - oi
 categories:
-  - oi
+  - OI
   - 排序
 ---
 ## 军事机密

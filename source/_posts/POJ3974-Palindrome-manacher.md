@@ -5,8 +5,9 @@ tags:
   - 字符串
   - manacher
 categories:
-  - oi
+  - OI
   - 字符串
+  - manacher
 ---
 Andy the smart computer science student was attending an algorithms class when the professor asked the students a simple question, "Can you propose an efficient algorithm to find the length of the largest palindrome in a string?"
 

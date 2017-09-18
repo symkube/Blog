@@ -5,7 +5,7 @@ tags:
   - 补档计划
   - 点分治
 categories:
-  - oi
+  - OI
   - 补档计划
 fancybox: false
 ---
@@ -500,7 +500,7 @@ int main() {
 <center>
 ![CF 716E Digit Tree](/images/CF-716E-Digit-Tree.svg)
 </center>
-$$\begin{cases} a_u = 321 & a_v = 54 \\ b_u = 123 & b_v = 45 \\ d_u = 3 & d_v = 2 \end{cases}$$
+{% raw %}$$\begin{cases} a_u = 321 & a_v = 54 \\ b_u = 123 & b_v = 45 \\ d_u = 3 & d_v = 2 \end{cases}$${% endraw %}
 从 $u$ 到 $v$ 的路径组成的数可以表示为
 $$a_u \times 10 ^ {d_v} + b_v$$
 题目要求的条件即为

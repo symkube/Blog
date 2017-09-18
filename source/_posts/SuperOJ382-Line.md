@@ -3,11 +3,9 @@ title: 「SuperOJ 382」连线游戏
 date: 2016-07-16 21:35:36
 tags: 
   - STL
-  - set
 categories: 
-  - oi
+  - OI
   - STL
-  - set
 ---
 ## 连线游戏
 ### 题目描述

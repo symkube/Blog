@@ -6,7 +6,7 @@ tags:
   - 矩阵树定理
   - 线性代数
 categories:
-  - oi
+  - OI
   - 学习笔记
 ---
 矩阵树定理的学习笔记和部分线性代数的知识，记录三道经典题目及变元矩阵树定理。
@@ -25,43 +25,43 @@ categories:
 
 #### $n$ 阶行列式
 设有 $n ^ 2$ 个数，组成 $n$ 行 $n$ 列的数表
-$$\begin{matrix}a_{11} & a_{12} & \cdots & a_{1n} \\ 
+{% raw %}$$\begin{matrix}a_{11} & a_{12} & \cdots & a_{1n} \\ 
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \cdots & \cdots & \cdots & \cdots \\
 a_{n1} & a_{n2} & \cdots & a_{nn}
-\end{matrix}$$
+\end{matrix}$${% endraw %}
 作出表中位于不同行不同列的 $n$ 个数的乘积，并冠以符号 $(-1) ^ \tau$，得到形如
-$$(-1) ^ \tau a_{1_{p_1}}a_{2_{p_2}} \cdots a_{n_{p_n}}$$
+{% raw %}$$(-1) ^ \tau a_{1_{p_1}}a_{2_{p_2}} \cdots a_{n_{p_n}}$${% endraw %}
 的项，其中 $p_1, p_2, \cdots, p_n$ 为自然数 $1, 2, \cdots, n$ 的一个排列，$\tau$ 为这个排列的逆序数。由于这样的排列共有 $n!$ 个，因而形如上式的项共有 $n!$ 项。所有这 $n!$ 的代数和
-$$\sum (-1) ^ \tau a_{1_{p_1}}a_{2_{p_2}} \cdots a_{n_{p_n}}$$
+{% raw %}$$\sum (-1) ^ \tau a_{1_{p_1}}a_{2_{p_2}} \cdots a_{n_{p_n}}$${% endraw %}
 称为 $n$ 阶行列式，记作
-$$D = \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ 
+{% raw %}$$D = \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ 
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \cdots & \cdots & \cdots & \cdots \\
 a_{n1} & a_{n2} & \cdots & a_{nn}
-\end{vmatrix}$$
-简记作 $\det \begin{pmatrix} a_{ij} \end{pmatrix}$。数 $a_{ij}$ 称为行列式 $\det \begin{pmatrix} a_{ij} \end{pmatrix}$ 的元素。
+\end{vmatrix}$${% endraw %}
+{% raw %}简记作 $\det \begin{pmatrix} a_{ij} \end{pmatrix}$。数 $a_{ij}$ 称为行列式 $\det \begin{pmatrix} a_{ij} \end{pmatrix}$ 的元素。{% endraw %}
 
 #### 基本原理公式
 ##### 公式一
-$$\begin{vmatrix}\lambda_1 & & & \\ 
+{% raw %}$$\begin{vmatrix}\lambda_1 & & & \\ 
  & \lambda_2 & & \\
  & & \ddots & \\
  & & & \lambda_n
-\end{vmatrix} = \lambda_1 \lambda_2 \cdots \lambda_n$$
+\end{vmatrix} = \lambda_1 \lambda_2 \cdots \lambda_n$${% endraw %}
 
-$$\begin{vmatrix} a_{11} & 0 &\cdots & 0 \\ 
+{% raw %}$$\begin{vmatrix} a_{11} & 0 &\cdots & 0 \\ 
 a_{21} & a_{22} & \cdots & 0 \\
 \vdots & \vdots & \ddots & 0 \\
 a_{n1} & a_{n2}& \cdots & a_{nn}
-\end{vmatrix} = a_{11}a_{22} \cdots a_{nn} $$
+\end{vmatrix} = a_{11}a_{22} \cdots a_{nn} $${% endraw %}
 
 ##### 公式二
-$$\begin{vmatrix} a_{11} & a_{12} &\cdots & a_{1n} \\ 
+{% raw %}$$\begin{vmatrix} a_{11} & a_{12} &\cdots & a_{1n} \\ 
 a_{21} & a_{22} & \cdots & 0 \\
 \vdots & \vdots & \ddots & 0 \\
 a_{n1} & 0& \cdots & 0
-\end{vmatrix} = (-1) ^ {\frac {n (n - 1)} {2}}a_{1n}a_{2(n-1)} \cdots a_{n1} $$
+\end{vmatrix} = (-1) ^ {\frac {n (n - 1)} {2}}a_{1n}a_{2(n-1)} \cdots a_{n1} $${% endraw %}
 
 #### 行列式的一些性质
 行列式 $D ^ T$ 称为行列式 $D$ 的转置行列式。
@@ -73,7 +73,7 @@ a_{n1} & 0& \cdots & 0
 - 行列式中某一行(列)的所有元素的公因子可以提到行列式符号的外面。
 - 行列式中如果有两行(列)元素成比例，则此行列式等于零。
 - 若行列式的某一行(列)的元素都是两数之和，例如第j列的元素都是两数之和：
-$$\begin{vmatrix} a_{11} & a_{12} &\cdots & a_{1j} + b_{1j}& \cdots& a_{1n} \\ 
+{% raw %}$$\begin{vmatrix} a_{11} & a_{12} &\cdots & a_{1j} + b_{1j}& \cdots& a_{1n} \\ 
 a_{21} & a_{22} & \cdots &a_{2j} + b_{2j} & \cdots& a_{2n} \\
 \vdots & \vdots &  & \vdots & \cdots & \vdots \\
 a_{n1} & a_{n2} & \cdots & a_{nj} + b_{nj} & \cdots & a_{nn}
@@ -81,11 +81,11 @@ a_{n1} & a_{n2} & \cdots & a_{nj} + b_{nj} & \cdots & a_{nn}
 a_{21} & a_{22} & \cdots &a_{2j} & \cdots& a_{2n} \\
 \vdots & \vdots &  & \vdots & \cdots & \vdots \\
 a_{n1} & a_{n2} & \cdots & a_{nj} & \cdots & a_{nn}
-\end{vmatrix} + \begin{vmatrix} a_{11} & a_{12} &\cdots & b_{1j}& \cdots& a_{1n} \\ 
+\end{vmatrix} + \\ \begin{vmatrix} a_{11} & a_{12} &\cdots & b_{1j}& \cdots& a_{1n} \\ 
 a_{21} & a_{22} & \cdots & b_{2j} & \cdots& a_{2n} \\
 \vdots & \vdots &  & \vdots & \cdots & \vdots \\
 a_{n1} & a_{n2} & \cdots & b_{nj} & \cdots & a_{nn}
-\end{vmatrix}$$
+\end{vmatrix}$${% endraw %}
 - 把行列式的某一列(行)的各元素乘以同一数然后加到另一列(行)对应的元素上去，行列式不变。
 
 #### 余子式和代数余子式
@@ -95,49 +95,49 @@ $A_{ij}$ 叫做元素 $a_{ij}$ 的**代数余子式**。
 
 #### 按行（列）展开行列式
 行列式等于它的任一行（列）的各元素与其对应的代数余子式乘积之和，即
-$$D = \sum_{j = 1} ^ n a_{ij}A_{ij} \  (i = 1, 2, \cdots, n)$$
+{% raw %}$$D = \sum_{j = 1} ^ n a_{ij}A_{ij} \  (i = 1, 2, \cdots, n)$${% endraw %}
 即 $i$ 为某一行，按列展开同理。
 
 #### 范德蒙德(Vandermonde)行列式
-$$D_n = \begin{vmatrix}1 & 1 & \cdots & 1 \\ 
+{% raw %}$$D_n = \begin{vmatrix}1 & 1 & \cdots & 1 \\ 
 x_1 & x_2 & \cdots & x_n \\
 x_1 ^ 2 & x_2 ^ 2 & \cdots & x_n ^ 2 \\
 \vdots & \vdots & & \vdots \\
 x_1 ^ {n - 1} & x_2 ^ {n - 1} & \cdots & x_n ^ {n - 1}
-\end{vmatrix} = \prod_{n \geq i \geq j \geq 1}(x_i - x_j)$$
+\end{vmatrix} = \prod_{n \geq i \geq j \geq 1}(x_i - x_j)$${% endraw %}
 
 #### 克拉默法则
 ##### 非齐次线性方程组
-$$\begin{cases}
+{% raw %}$$\begin{cases}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ 
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\
 \cdots \\
 a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = b_n
-\end{cases}$$
+\end{cases}$${% endraw %}
 其中右端的常数项 $b_1, b_2, \cdots, b_n$ 不能全为零。
 ##### 齐次线性方程组
-$$\begin{cases}
+{% raw %}$$\begin{cases}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0 \\ 
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0 \\
 \cdots \\
 a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0
-\end{cases}$$
+\end{cases}$${% endraw %}
 #### 克拉默法则
 设非齐次线性方程组
-$$\begin{cases}
+{% raw %}$$\begin{cases}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ 
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\
 \cdots \\
 a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = b_n
-\end{cases}$$
+\end{cases}$${% endraw %}
 其系数行列式为
-$$D = \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ 
+{% raw %}$$D = \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ 
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &  & \vdots \\
 a_{n1} & a_{n2} & \cdots & a_{nn}
-\end{vmatrix} \neq 0$$
+\end{vmatrix} \neq 0$${% endraw %}
 则方程组有唯一解
-$$x_j = \frac {D_j} {D} \ \  (j = 1, 2, \cdots, n)$$
+{% raw %}$$x_j = \frac {D_j} {D} \ \  (j = 1, 2, \cdots, n)$${% endraw %}
 其中 $D_j$ 是把系数行列式 $D$ 中的第 $j$ 列的元素用方程组右端的常数项代替后所得到的 $n$ 阶行列式。
 
 - 如果线性方程组的系数行列式 $D \neq 0$，则一定有解，且解是唯一的。
@@ -150,12 +150,14 @@ $$x_j = \frac {D_j} {D} \ \  (j = 1, 2, \cdots, n)$$
 位于矩阵左上角的 $k$ 阶子式，称为矩阵的 $k$ 阶主子式。
 
 #### Binet-Cauchy 公式
-设 $A$ 和 $B$ 各为 $p * q$ 及 $q * p$ 矩阵，则有
-$$\det AB = \begin{cases}0 & p > q \\
+设 $A$ 和 $B$ 各为 $p \times q$ 及 $q \times p$ 矩阵，则有
+
+{% raw %}$$\det AB = \begin{cases}0 & p > q \\
 \det A \det B & p = q \\
-\sum_{1 \leq j_1 < \cdots < j_p \leq q} A \begin{pmatrix}1 & 2 & \cdots & p\\ j_1 & j_2 & \cdots & j_p\end{pmatrix} B \begin{pmatrix}j_1 & j_2 & \cdots & j_p \\ 1 & 2 & \cdots & p\end{pmatrix} & p < q
-\end{cases}$$
-特别的，$\det A A ^ T = (\det A) ^ 2$
+\sum_{1 \leq j_1 {% endraw %} < {% raw %}\cdots{% endraw %} < {% raw %}j_p \leq q} A \begin{pmatrix}1 & 2 & \cdots & p\\ j_1 & j_2 & \cdots & j_p\end{pmatrix} B \begin{pmatrix}j_1 & j_2 & \cdots & j_p \\ 1 & 2 & \cdots & p\end{pmatrix} & p{% endraw %} < {% raw %}q
+\end{cases}$${% endraw %}
+
+特别的，{% raw %}$\det A A ^ T = (\det A) ^ 2${% endraw %}
 
 ### 矩阵树定理
 #### 一些定义
@@ -174,29 +176,29 @@ $n - 1$ 阶主子式，就是对于 $r (1 \leq r \leq n)$，将 $C[G]$ 的第 $r
 
 ![MatrixTree](/images/MatrixTree1.svg)
 
-$$D[G] = \begin{pmatrix}2 & 0 & 0 & 0 & 0 \\
+{% raw %}$$D[G] = \begin{pmatrix}2 & 0 & 0 & 0 & 0 \\
 0 & 3 & 0 & 0 & 0 \\
 0 & 0 & 3 & 0 & 0 \\
 0 & 0 & 0 & 2 &  0\\
-0 &  0 & 0 & 0 & 2 \end{pmatrix}$$
+0 &  0 & 0 & 0 & 2 \end{pmatrix}$${% endraw %}
 
-$$A[G] = \begin{pmatrix}0 & 1 & 1 & 0 & 0 \\
+{% raw %}$$A[G] = \begin{pmatrix}0 & 1 & 1 & 0 & 0 \\
 1 & 0 & 1 & 1 & 0 \\
 1 & 1 & 0 & 0 & 1 \\
 0 & 1 & 0 & 0 &  1\\
-0 &  0 & 1 & 1 & 0 \end{pmatrix}$$
+0 &  0 & 1 & 1 & 0 \end{pmatrix}$${% endraw %}
 
-$$C[G] = \begin{pmatrix}2 & -1 & -1 & 0 & 0 \\
+{% raw %}$$C[G] = \begin{pmatrix}2 & -1 & -1 & 0 & 0 \\
 -1 & 3 & -1 & -1 & 0 \\
 -1 & -1 & 3 & 0 & -1 \\
 0 & -1 & 0 & 2 &  -1\\
-0 &  0 & -1 & -1 & 2 \end{pmatrix}$$
+0 &  0 & -1 & -1 & 2 \end{pmatrix}$${% endraw %}
 
 任意取一个 $r$，如 $r = 2$ 得
-$$C_2[G] = \begin{pmatrix}2 & -1 & 0 & 0 \\
+{% raw %}$$C_2[G] = \begin{pmatrix}2 & -1 & 0 & 0 \\
 -1 & 3 & 0 & -1 \\
 0 & 0 & 2 &  -1\\
-0 &  -1 & -1 & 2 \end{pmatrix}$$
+0 &  -1 & -1 & 2 \end{pmatrix}$${% endraw %}
 
 计算其行列式值为 $11$，故该图生成树个数为 $11$。
 
@@ -540,11 +542,11 @@ int main() {
 
 #### 题解
 ##### 变元矩阵树定理
-邻接矩阵中是可以带权的，$w_{ij}$ 表示 $i, j$ 的边权，$e_i$ 表示边。
-定义 $G(i, j) = G(j, i) = w_{ij}$，令 $G(i, i) = - \sum_{j \neq i} G(i, j)$
+邻接矩阵中是可以带权的，$w_{ij}$ 表示 $i, j$ 的边权，{% raw %}$e_i${% endraw %} 表示边。
+定义 {% raw %}$G(i, j) = G(j, i) = w_{ij}${% endraw %}，令 {% raw %}$G(i, i) = - \sum_{j \neq i} G(i, j)${% endraw %}
 
 那么 $n - 1$ 阶主子式的值为
-$$\sum_{T \text{ form a tree}}(\prod_{i \in T}w_{e_i})$$
+{% raw %}$$\sum_{T \text{ form a tree}}(\prod_{i \in T}w_{e_i})$${% endraw %}
 
 即求出的是所有生成树边权积之和。
 
@@ -553,18 +555,18 @@ $$\sum_{T \text{ form a tree}}(\prod_{i \in T}w_{e_i})$$
 令 $P(i, j)$ 表示题目中所给出的概率矩阵，$G(i, j)$ 为我们所要构造的基尔霍夫矩阵。
 
 先考虑一棵生成树的概率，$T$ 表示这棵生成树，其概率应为
-$$\prod_{e \in T}P_e \prod_{e \notin T}(1 - P_e)$$
+{% raw %}$$\prod_{e \in T}P_e \prod_{e \notin T}(1 - P_e)$${% endraw %}
 即在生成树上的边连通的概率乘上不在生成树上的边不连通的概率。
 
 我们令 $G(i, j) = \frac {P(i, j)} {1 - P(i, j)}$，然后套用变元矩阵树定理，令
-$$G(i, i) = -\sum_{j \neq i}G(i, j)$$
+{% raw %}$$G(i, i) = -\sum_{j \neq i}G(i, j)$${% endraw %}
 求出 $G$ 的 $n - 1$ 阶主子式，即为
-$$\sum_{T \text{ form a tree}}\prod_{e \in T}\frac {P_e} {1 - P_e}$$
+{% raw %}$$\sum_{T \text{ form a tree}}\prod_{e \in T}\frac {P_e} {1 - P_e}$${% endraw %}
 令
-$$f = \prod_{e} (1 - P_e)$$
+{% raw %}$$f = \prod_{e} (1 - P_e)$${% endraw %}
 那么将其乘上 $f$，可得
-$$\begin{aligned} & \prod_{e}(1 - P_e) \sum_{T \text{ form a tree}}\prod_{e \in T}\frac {P_e} {1 - P_e}\\ = & \sum_{T \text{ form a tree}} \prod_{e}(1 - P_e)\prod_{e \in T}\frac {P_e} {1 - P_e} \\
-= & \sum_{T \text{ form a tree}}\prod_{e \in T}P_e \prod_{e \notin T}(1 - P_e) \end{aligned}$$
+{% raw %}$$\begin{aligned} & \prod_{e}(1 - P_e) \sum_{T \text{ form a tree}}\prod_{e \in T}\frac {P_e} {1 - P_e}\\ = & \sum_{T \text{ form a tree}} \prod_{e}(1 - P_e)\prod_{e \in T}\frac {P_e} {1 - P_e} \\
+= & \sum_{T \text{ form a tree}}\prod_{e \in T}P_e \prod_{e \notin T}(1 - P_e) \end{aligned}$${% endraw %}
 
 于是我们就得出了答案，实现的时候要注意 $P = 1$ 的问题，我们把它当成 $1 - \epsilon$ 就好了。
 

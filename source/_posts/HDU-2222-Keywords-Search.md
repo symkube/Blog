@@ -5,7 +5,8 @@ tags:
   - 字符串
   - AC自动机
 categories:
-  - oi
+  - OI
+  - 字符串
   - AC自动机
 ---
 In the modern time, Search engine came into the life of everybody like Google, Baidu, etc.
