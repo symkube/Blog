@@ -128,7 +128,9 @@ index_generator_plus:
   per_page: 15
 
 sitemap:
-  path: sitemap.xml
+    path: sitemap.xml
+    tag: false
+    category: false
 
 baidusitemap:
   path: baidusitemap.xml
