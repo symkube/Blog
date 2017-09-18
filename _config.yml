@@ -114,6 +114,8 @@ js_minifier:
   compress:
   exclude: 
     - '*.min.js'
+    - 'main.js'
+    - 'gitalk.js'
 
 image_minifier:
   enable: false
