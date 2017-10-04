@@ -117,7 +117,7 @@ miscellaneous:
 
 player:
     enable: true
-    id: 146351055
+    id: 391387277
     server: netease
     type: playlist
     mode: random
