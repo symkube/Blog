@@ -43,6 +43,11 @@
 </article>
 
 <% if (!index) { %>
+    <% if (theme.player.enable) { %>
+        <script src="<%- theme.CDN.Aplayer %>"></script>
+        <script src="<%- theme.root_url %>/js/player.min.js"></script>
+        <style>li {margin: 0em 0;}button {min-height: 0px;}.aplayer {margin: 2em 0 1.75em 0 !important;background: white;}</style>
+    <% } %>
     <link rel="stylesheet" href="<%- theme.root_url %>/css/gitalk.css">
     <script src="<%- theme.root_url %>/js/gitalk.js"></script>
     <section id="comments">

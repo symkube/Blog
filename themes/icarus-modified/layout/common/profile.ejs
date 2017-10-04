@@ -36,6 +36,9 @@
         </div>
         <% } %>
     </div>
+    <% if (theme.player.enable) { %>
+        <div class="aplayer" data-id="<%- theme.player.id %>" data-server="<%- theme.player.server %>" data-type="<%- theme.player.type %>" data-mode="<%- theme.player.mode %>" data-autoplay="<%- theme.player.auto %>"></div>
+    <% } %>
     <% if (site.tags.length) { %>
         <div class="widget-wrap">
             <h3 class="widget-title"><%= __('widget.tags') %></h3>
