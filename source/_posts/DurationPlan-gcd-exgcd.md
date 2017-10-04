@@ -7,6 +7,7 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
 这里重新复习一下扩展欧几里得算法的常见应用。
 <!-- more -->

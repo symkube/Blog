@@ -9,6 +9,7 @@ categories:
   - OI
   - 图论
   - 2-SAT
+toc: true
 ---
 一些 2-SAT 题目。
 <!-- more -->

@@ -8,6 +8,7 @@ tags:
 categories:
   - OI
   - 学习笔记
+toc: true
 ---
 ## 后缀自动机学习总结
 ### 前置技能

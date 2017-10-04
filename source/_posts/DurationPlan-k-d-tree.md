@@ -8,6 +8,7 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
 k-d 树（k-dimensional tree）是在 $k$ 维欧几里德空间组织点的数据结构。k-d 树可以使用在多种应用场合，如多维键值搜索（例：范围搜寻及最邻近搜索）。k-d 树 是空间二分树（Binary space partitioning）的一种特殊情况。而在算法竞赛中，k-d树往往用于在二维平面内的信息检索，这里主要指二维 k-d 树。
 <!-- more -->

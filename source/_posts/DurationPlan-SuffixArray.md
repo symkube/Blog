@@ -8,8 +8,9 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
-后缀数组的一些应用和题目，这里所有的时间复杂度均针对 [SA-IS](https://blog.xehoth.cc/2016/12/26/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84%E5%8F%8ASA-IS%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/) 算法。
+后缀数组的一些应用和题目，这里所有的时间复杂度均针对 [SA-IS](https://blog.xehoth.cc/SA-IS/) 算法。
 <!-- more -->
 ### 「SPOJ694」Distinct Substrings
 #### 链接

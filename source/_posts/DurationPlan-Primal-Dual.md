@@ -8,6 +8,7 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
 求解最小费用流的算法有很多，如增广路算法(SPFA)，消圈算法，zkw 算法，Primal Dual 算法及网络单纯形，其中消圈算法和网络单纯形较为通用但速度不够快或编程复杂度过高，SPFA 和 zkw 在不同的图上各有所长，这里介绍不容易被卡掉的 Primal Dual 算法。
 

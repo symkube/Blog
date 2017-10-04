@@ -8,6 +8,7 @@ categories:
   - OI
   - 补档计划
 fancybox: false
+toc: true
 ---
 点分治专题。
 <!-- more -->

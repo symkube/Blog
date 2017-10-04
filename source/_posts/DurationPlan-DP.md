@@ -8,6 +8,7 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
 dp 太弱，先补动规专题...
 

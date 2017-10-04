@@ -8,6 +8,7 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
 复习 Tarjan 算法以及一些常见的应用。
 <!-- more -->

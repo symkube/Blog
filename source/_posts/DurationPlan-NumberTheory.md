@@ -8,6 +8,7 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
 关于数论的总结和专题练习....
 <!-- more -->

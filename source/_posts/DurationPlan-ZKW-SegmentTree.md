@@ -6,6 +6,7 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
 听说此题又卡线段树，没事我们还有 ZKW 线段树......
 ZKW 线段树在代码长度(不打标记时)和时间上较普通线段树都有较大优势，在 `RMQ` 甚至会出现~~喜闻乐见~~的 $O(\text{ log }n)$ 踩 $O(\text{ log log }n)$ 甚至 $O(1)$ 算法。

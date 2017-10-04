@@ -7,6 +7,7 @@ tags:
 categories:
   - OI
   - 补档计划
+toc: true
 ---
 一些常见的计算几何。
 <!-- more -->
