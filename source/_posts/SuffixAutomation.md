@@ -132,4 +132,3 @@ inline Node *extend(int c, Node *p) {
 - [MAXimal :: algo :: Суффиксный автомат. Построение и применения](http://e-maxx.ru/algo/suffix_automata)
 - [后缀自动机的构建及应用](http://blog.csdn.net/wmdcstdio/article/details/44780707)
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=786262&auto=1&height=66"></iframe>

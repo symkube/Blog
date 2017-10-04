@@ -197,4 +197,3 @@ struct HighestLabelPreflowPush {
 同上面的 ISAP，HLPP 分别耗时 $650 ms$ 和 $600 ms$ 左右。
 ### 总结
 一般情况使用性价比较高的 ISAP，当遇到分层图问题时尽量使用 HLPP，如 [ZOJ-2364/SGU-212 Data Transmission](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2364)，此题求一个分层图的阻塞流，HLPP 能够很快的得出答案，而 ISAP / Dinic 必须要使用贪心预流的技术才能通过。
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=874229&auto=1&height=66"></iframe>

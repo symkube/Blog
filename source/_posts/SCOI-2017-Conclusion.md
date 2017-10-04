@@ -71,4 +71,3 @@ Day1 炸了我的心态确实需要调整，像 yyy 和 zyqn 这样的调整能�
 总结一下，做题顺序真的十分重要，能拿的分就要求稳不丢．
 
 努力奋斗吧，多积累经验，只能说明日は明日の风が吹く，自己加油吧....
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=40915589&auto=1&height=66"></iframe>

@@ -32,4 +32,3 @@ categories:
 看一眼，果断搜索，推出求 $a$ 和 $b$ 值的公式就赶紧打暴力，貌似此题可以贪心？
 对于 hyj 强行高斯消元我也是醉的不行...
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=837185&auto=1&height=66"></iframe>

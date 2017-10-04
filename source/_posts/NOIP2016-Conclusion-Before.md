@@ -422,4 +422,3 @@ nth_element(a + 1, a + n / 2 + 1, a + n + 1);
 13. bitset可以强行优化一些常数。
 14. 注意离散化的多种方法。
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32803111&auto=1&height=66"></iframe>

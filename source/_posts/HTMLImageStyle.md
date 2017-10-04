@@ -26,4 +26,3 @@ style="float:left;"
   box-shadow:0 0 10px rgba(0, 204, 204, .5);width:240px;height:180px;">
 ```
 **最终效果可见[首页](http://blog.xehoth.cc)**
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=812735&auto=1&height=66"></iframe>

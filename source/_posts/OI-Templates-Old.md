@@ -527,4 +527,3 @@ accumulate(beg,end,init);
 //内积
 inner_product(beg,end,beg2,init[,binOp1,binOp2]);
 ```
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=836301&auto=1&height=66"></iframe>
