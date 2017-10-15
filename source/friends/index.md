@@ -141,6 +141,13 @@ comments: true
             <span></span>
         </li>
     </a>
+    <a href="http://zory.cf/" title="Zory's Blog" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/zory.jpg" alt="Zory" width="72px">
+            <span class="md-links-title">Zory</span><br>
+            <span>你若不想做,会找到一个借口;你若想做, 会找到一个方法</span>
+        </li>
+    </a>
 </div>
 {% endraw %}
 
