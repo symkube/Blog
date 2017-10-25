@@ -175,6 +175,62 @@ comments: true
             <span></span>
         </li>
     </a>
+    <a href="http://blog.csdn.net/Anonymous_jacklovecj" title="jacklovecj's Blog" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/anonymous_jacklovecj.jpg" alt="jacklovecj" width="72px">
+            <span class="md-links-title">jacklovecj</span><br>
+            <span></span>
+        </li>
+    </a>
+    <a href="http://blog.csdn.net/g19zwk" title="zwk" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/zwk.jpg" alt="zwk" width="72px">
+            <span class="md-links-title">zwk</span><br>
+            <span></span>
+        </li>
+    </a>
+    <a href="http://blog.csdn.net/qianguch" title="qianguch" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/qianguch.jpg" alt="qianguch" width="72px">
+            <span class="md-links-title">qianguch</span><br>
+            <span></span>
+        </li>
+    </a>
+    <a href="http://blog.csdn.net/cdsszjj" title="zjj" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/zjj.jpg" alt="zjj" width="72px">
+            <span class="md-links-title">zjj</span><br>
+            <span></span>
+        </li>
+    </a>
+    <a href="http://www.cnblogs.com/czyol" title="CzYoL" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/CzYoL.png" alt="CzYoL" width="72px">
+            <span class="md-links-title">CzYoL</span><br>
+            <span>Stay Curious, Stay Wild.</span>
+        </li>
+    </a>
+    <a href="http://www.cnblogs.com/AseanA" title="AseanA" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/9.jpg" alt="AseanA" width="72px">
+            <span class="md-links-title">AseanA</span><br>
+            <span>stay hungry, stay foolish</span>
+        </li>
+    </a>
+    <a href="http://blog.csdn.net/friedrich_taylor" title="Friedrich_Taylor" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/9.jpg" alt="Friedrich_Taylor" width="72px">
+            <span class="md-links-title">Friedrich_Taylor</span><br>
+            <span>Friedrich_Taylor</span>
+        </li>
+    </a>
+    <a href="http://blog.csdn.net/tshoigyr" title="tshoigyr's Blog" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/tshoigyr.jpg" alt="tshoigyr" width="72px">
+            <span class="md-links-title">tshoigyr</span><br>
+            <span></span>
+        </li>
+    </a>
     <a href="https://gyming.org/" title="GYM's Blog" target="_blank">
         <li class="md-links-item">
             <img src="/images/friends/GYM.jpeg" alt="GYM" width="72px">
