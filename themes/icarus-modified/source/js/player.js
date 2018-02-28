@@ -6,7 +6,7 @@ r(function () {
     function e(e, t) {
         var a = [],
             r = e.dataset;
-        a.element = e, a.music = t, a.showlrc = a.music[0].lrc ? 3 : 0, a.narrow = "true" === r.narrow, a.autoplay = "true" === r.autoplay, a.mutex = "false" !== r.mutex, a.mode = r.mode || "circulation", a.preload = r.preload || "auto", a.listmaxheight = r.listmaxheight || "100px", a.theme = r.theme || "#ad7a86", new APlayer(a)
+        a.element = e, a.music = t, a.showlrc = a.music[0].lrc ? 3 : 0, a.narrow = "true" === r.narrow, a.autoplay = "true" === r.autoplay, a.mutex = "false" !== r.mutex, a.mode = r.mode || "circulation", a.preload = r.preload || "auto", a.listmaxheight = r.listmaxheight || "100px", a.theme = r.theme || "#ad7a86", new APlayer(a).volume(0.3)
     }
     console.log("\n %c Meting 1.2.2 %c https://i-meto.com/ghost-aplayer/ \n\n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
     var t = "https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r";
