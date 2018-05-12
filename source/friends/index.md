@@ -148,6 +148,13 @@ comments: true
             <span>你若不想做,会找到一个借口;你若想做, 会找到一个方法</span>
         </li>
     </a>
+    <a href="https://blog.hz2016.cn/" title="hz2016's Blog" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/hz2016.png" alt="hz2016" width="72px">
+            <span class="md-links-title">hz2016</span><br>
+            <span></span>
+        </li>
+    </a>
 </div>
 {% endraw %}
 
