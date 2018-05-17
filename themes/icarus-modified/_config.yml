@@ -124,7 +124,7 @@ player:
     auto: true
 
 CDN:
-    mathjax: //cdn.bootcss.com/mathjax/2.7.4/MathJax.js
-    jquery: //cdn.bootcss.com/jquery/3.2.1/jquery.min.js
+    mathjax: //blog.xehoth.cc/js/MathJax.js
+    jquery: //blog.xehoth.cc/js/jquery.min.js
     font_awesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
-    Aplayer: //cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js
+    Aplayer: //blog.xehoth.cc/js/APlayer.min.js
