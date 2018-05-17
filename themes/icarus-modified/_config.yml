@@ -125,6 +125,7 @@ player:
 
 CDN:
     mathjax: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js
-    jquery: //blog.xehoth.cc/js/jquery/jquery.min.js
-    font_awesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
-    Aplayer: //blog.xehoth.cc/js/APlayer/APlayer.min.js
+    jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js
+    font_awesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+    Aplayer: //cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js
+    AplayerCSS: //cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css
