@@ -121,7 +121,7 @@ player:
     server: netease
     type: playlist
     mode: random
-    auto: true
+    auto: false
 
 CDN:
     mathjax: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js
