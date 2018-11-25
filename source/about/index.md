@@ -4,12 +4,12 @@ type: "about"
 date: 2016-05-23 22:12:31
 ---
 ## xehoth
-来自成都石室中学的OIer，2016年6月开始学OI，~~现役高二~~SCOI 2018 AFO。
+来自成都石室中学的~~老年退役 OIer~~，2016年6月开始学OI，高三狗。
 
-在此之前用Java和Lua写工程(其实没有Jetbrains全家桶就几乎写不出来代码)。
+在此之前用 Java 和 Lua 写工程。
 
-- 操作系统 Ubuntu 16.04 LTS / Windows 7 Professional
-- 编辑器/IDE IntelliJ IDEA / Clion / Eclipse / Visual Studio / Vim / Sublime / Atom
+- 操作系统 Ubuntu 16.04 LTS / Windows 10 Professional
+- 编辑器/IDE Visual Studio / Visual Studio Code / IntelliJ IDEA
 - Touhou fan
 
 ......

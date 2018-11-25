@@ -54,21 +54,6 @@ comments: true
 </style>
 {% endraw %}
 
-### Developers
-
-{% raw %}
-<div class="md-links" style="none;">
-    <a href="https://uuz.moe/" title="雨宮千夏の博麗神社" target="_blank">
-        <li class="md-links-item">
-            <img src="/images/friends/uuz-moe.jpg" alt="雨宮千夏" width="72px">
-            <span class="md-links-title">雨宮千夏</span><br>
-            <span>永遠とはそういうこと。ワビの世界よ。</span>
-        </li>
-    </a>
-</div>
-{% endraw %}
-
-### OIers
 {% raw %}
 <div class="md-links" style="none;">
     <a href="https://men.ci/" title="Menci's Blog" target="_blank">
@@ -76,6 +61,13 @@ comments: true
             <img src="/images/friends/menci.png" alt="Menci" width="72px">
             <span class="md-links-title">Menci</span><br>
             <span>眉眼如初，岁月如故</span>
+        </li>
+    </a>
+     <a href="https://uuz.moe/" title="雨宮千夏の博麗神社" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/uuz-moe.jpg" alt="雨宮千夏" width="72px">
+            <span class="md-links-title">雨宮千夏</span><br>
+            <span>永遠とはそういうこと。ワビの世界よ。</span>
         </li>
     </a>
     <a href="https://q234rty.top/" title="q234rty's Blog" target="_blank">
@@ -92,10 +84,10 @@ comments: true
             <span></span>
         </li>
     </a>
-    <a href="http://sxysxy.org/" title="sxysxy's Blog" target="_blank">
+    <a href="https://riteme.github.io" title="riteme’s site" target="_blank">
         <li class="md-links-item">
-            <img src="/images/friends/sxysxy.jpg" alt="sxysxy" width="72px">
-            <span class="md-links-title">sxysxy</span><br>
+            <img src="/images/friends/riteme.png" alt="riteme" width="72px">
+            <span class="md-links-title">riteme</span><br>
             <span></span>
         </li>
     </a>
@@ -124,6 +116,13 @@ comments: true
         <li class="md-links-item">
             <img src="/images/friends/hplv-pw.jpg" alt="HenryLi" width="72px">
             <span class="md-links-title">HenryLi</span><br>
+            <span></span>
+        </li>
+    </a>
+    <a href="http://sxysxy.org/" title="sxysxy's Blog" target="_blank">
+        <li class="md-links-item">
+            <img src="/images/friends/sxysxy.jpg" alt="sxysxy" width="72px">
+            <span class="md-links-title">sxysxy</span><br>
             <span></span>
         </li>
     </a>
